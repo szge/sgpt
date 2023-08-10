@@ -1,35 +1,54 @@
 import torch
 import torch.nn as nn
-from torch.nn import functional as F
+from torch.nn import functional as fn
 import os
+import tiktoken
 
-# hyperparameters
-BATCH_SIZE = 16  # number of sequences per batch
-BLOCK_SIZE = 64  # length of sequence to process at a time
-MAX_ITERS = 5000
+# region hyperparameters
+# full
+# BATCH_SIZE = 16  # number of sequences per batch
+# BLOCK_SIZE = 64  # length of sequence to process at a time
+# MAX_ITERS = 5000
+# EVAL_INTERVAL = 500
+# LEARNING_RATE = 3e-4
+# DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+# EVAL_ITERS = 200
+# N_EMBED = 60  # must be divisible by N_HEADS
+# N_HEADS = 6
+# N_LAYERS = 4
+# DROPOUT = 0.2
+
+# test
+BATCH_SIZE = 32  # number of sequences per batch
+BLOCK_SIZE = 8  # length of sequence to process at a time
+MAX_ITERS = 3000
 EVAL_INTERVAL = 500
-LEARNING_RATe = 3e-4
+LEARNING_RATE = 3e-4
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 EVAL_ITERS = 200
-N_EMBED = 60  # must be divisible by N_HEADS
-N_HEADS = 6
-N_LAYERS = 4
+N_EMBED = 32  # must be divisible by N_HEADS
+N_HEADS = 4
+N_LAYERS = 2
 DROPOUT = 0.2
+# endregion
 
 torch.manual_seed(1337)
 
 with open("./corpora/cntkillme.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
-chars = sorted(list(set(text)))
-vocab_size = len(chars)
-
 # tokenizer: create a mapping between characters and integers
-stoi = {ch: i for i, ch in enumerate(chars)}
-itos = {i: ch for i, ch in enumerate(chars)}
-def encode(s: str) -> list[int]: return [stoi[c] for c in s]
-def decode(k: list[int]) -> str: return "".join([itos[i] for i in k])
+# chars = sorted(list(set(text)))
+# stoi = {ch: i for i, ch in enumerate(chars)}
+# itos = {i: ch for i, ch in enumerate(chars)}
+# def encode(s: str) -> list[int]: return [stoi[c] for c in s]
+# def decode(k: list[int]) -> str: return "".join([itos[i] for i in k])
 
+# use tiktoken
+enc = tiktoken.get_encoding("cl100k_base")
+encode = enc.encode
+decode = enc.decode
+vocab_size = enc.max_token_value + 1
 
 # train and test splits
 data = torch.tensor(encode(text), dtype=torch.long)
@@ -79,7 +98,7 @@ class Head(nn.Module):
         q = self.query(x)
         wei = q @ k.transpose(-2, -1) * c ** (-0.5)  # normalize to produce variance 1
         wei = wei.masked_fill(self.tril[:t, :t] == 0, float("-inf"))
-        wei = F.softmax(wei, dim=-1)
+        wei = fn.softmax(wei, dim=-1)
         wei = self.dropout(wei)
         v = self.value(x)
         out = wei @ v
@@ -171,7 +190,7 @@ class BigramLM(nn.Module):
             b, t, c = logits.shape
             logits = logits.view(b * t, c)
             targets = targets.view(b * t)
-            loss = F.cross_entropy(logits, targets)
+            loss = fn.cross_entropy(logits, targets)
 
         return logits, loss
 
@@ -181,7 +200,7 @@ class BigramLM(nn.Module):
             idx_cond = idx[:, -BLOCK_SIZE:]  # crop idx to the last BLOCK_SIZE tokens
             logits, loss = self(idx_cond)  # get the prediction
             logits = logits[:, -1, :]  # focus only on the last step, becomes (B, C)
-            probs = F.softmax(logits, dim=-1)  # apply softmax to get probabilities, (B, C)
+            probs = fn.softmax(logits, dim=-1)  # apply softmax to get probabilities, (B, C)
             idx_next = torch.multinomial(probs, num_samples=1)  # sample from the distribution, (B, 1)
             idx = torch.cat((idx, idx_next), dim=1)  # (B, T + 1)
         return idx
