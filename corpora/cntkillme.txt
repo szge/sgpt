@@ -1,0 +1,9544 @@
+Re: I need a scripter!
+
+cntkillme:
+
+I will do it for less than 1 robux (WHAT)
+
+what u want to make
+
+Re: How many people are alive.
+
+cntkillme:
+
+local alive = 0
+
+function isAlive()
+littlePunks = game.Players:GetChildren()
+for i = 1, #littlePunks do
+if littlePunks[i].Character.Humanoid.Health >0 then
+alive = alive + 1
+end
+end
+end
+
+
+^^Try It^^, No Need For Bool Value
+
+Re: How many people are alive.
+
+cntkillme:
+
+IntValue []][
+
+[YOU ADD AN ONPLAYERENTED, THANK YOU]
+
+local alive = 0
+function isAlive()
+littlePunks = game.Players:GetChildren()
+for i = 1, #littlePunks do
+if littlePunks[i].IsAlive.Value == 1 then
+alive = alive + 1
+end
+end
+end
+
+Re: Level/Player GUI
+
+cntkillme:
+
+add other plp in a loop;;;
+
+here, put it where u want
+
+myKids = game.Players:GetChildren()
+for i = 1, #myKids do
+script.Parent.Text = myKids[i] .. " | "
+end
+
+Re: Level/Player GUI
+
+cntkillme:
+
+forgot:
+
+scirpt.Parnet.Text = myKids[i].Level.Value
+
+Re: Why is the script not working???
+
+cntkillme:
+
+what if numplayers IS 2
+
+If less then 2 make playing value false??
+
+and i didnt read the rest cuz i lazy
+
+Re: Gui Tools
+
+cntkillme:
+
+use onKeypress/  onkeydown i forget
+
+Re: I vote one thing, it comes out with something else?
+
+cntkillme:
+
+cuz ur choosing a random number?? or is that NOT what u mean?
+
+
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+model = thingHere
+backup = model:clone()
+
+
+local tingping = 0
+
+function onTouched(hit)
+   if tingping == 0 then
+      tingping = 1
+      weirdpunk = hit.Parent:FindFirstChild("Humanoid")
+      if weirdpunk ~= nil then
+         model = backup:clone()
+         model.Parent = game.Workspace
+         wait(1)
+         tingping = 0
+     end
+   tingping = 0
+  end
+end
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+but ur real problem is that
+the brickcolor.new thing has no FUNCTION ASSOCIATED WITH IT, A RANDOM END
+
+im mad :{
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+model = script.Parent.Parent
+backup = model:clone()
+enabled = true
+
+function regenerate()
+    script.Disabled = true
+    script.Parent.BrickColor = BrickColor.new(26)--Black
+    wait(3)
+    script.Parent.BrickColor = BrickColor.new(104)--Purple
+    script.Disabled = false
+end
+
+function onHit(hit)
+    if (hit.Parent:FindFirstChild("Humanoid") ~= nil) and enabled then
+        regenerate()
+    end
+end
+
+script.Parent.Touched:connect(onHit)
+
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+THE ULTIMATE REAL WORKING SCRIPT
+----------------------------------------------
+
+model = script.Parent.Parent
+backup = model:clone()
+
+function regenerate()
+script.Disabled = true
+script.Parent.BrickColor = BrickColor.new(26)--Black
+model = backup:clone()
+model.Parent = game.Workspace
+wait(3)
+script.Parent.BrickColor = BrickColor.new(104)--Purple
+script.Disabled = false
+end
+
+function onHit(hit)
+if (hit.Parent:FindFirstChild("Humanoid") ~= nil) and enabled then
+regenerate()
+end
+end
+
+script.Parent....
+
+Re: FOr iv pairs do
+
+cntkillme:
+
+Skills:
+
+punkNoobsLikeOysi = game.Players:GetChildren()
+
+for i = 1, #punkNoobsLikeOysi do
+punkNoobsLikeOysi [i].BLAHBLAH
+end
+
+
+My Way, I Hate Using for i,v in pairs
+
+Re: FOr iv pairs do
+
+cntkillme:
+
+And I Know The Best Scripting:
+
+ALot Of Each:
+
+html, javascript, vb, c++, vbs[windows scripting *.vbs [same thingish as vb], css, php, mysql, lua, roblox lua, 
+
+A Bit Of Asp
+
+Re: FOr iv pairs do
+
+cntkillme:
+
+Forgot:
+
+msdos scripting (*.bat, *.cmd)
+
+Re: FOr iv pairs do
+
+cntkillme:
+
+sorry, i read the first post before i posted =D
+
+i then read the rest D=
+
+Re: Arm Removal
+
+cntkillme:
+
+function onTouched(hit)
+check = hit.Parent:FindFirstChild("Humanoid")
+LArm = hit:FindFirstChild("Left Arm")
+RArm = hit:FindFirstChild("Right Arm")
+if check ~= nil and LArm ~= nil and RArm ~= nil then
+LArm:Remove()
+RArm:Remove()
+
+end
+end
+
+script.Parent.Touched:connect(onTouched)
+
+Re: Arm Removal
+
+cntkillme:
+
+@ziggly27
+Why That Won't Work
+First: Arm1 Need To Be Left Arm/Right Arm
+Second: Ur saying to remove the arms when it is already gone:
+
+hit.Parent:findFirstChild("Arm1") == nil then
+
+should be either
+
+hit.Parent:findFirstChild("Left Arm") ~= nil then
+or
+hit.Parent:findFirstChild("Right Arm") ~= nil then
+
+Re: Lets make a RPG
+
+cntkillme:
+
+ehh sure.
+
+Re: Lets make a RPG
+
+cntkillme:
+
+ill prob help with most of the scripting [if needed]
+or some of the building
+
+Re: I need a script corrected!
+
+cntkillme:
+
+Ur Problem
+
+When Something Hits It, Is It Called Cube
+Because When U Do Hit.Parent; Ur Making An Object In The Model Cube Hit It
+
+Try This:
+
+function onTouched(hit)
+if hit.Name == "Cube" then
+script.Parent.Parent.Door.Transparency = 1
+script.Parent.Parent.Door.CanCollide = false
+end
+
+
+
+Re: I need a script corrected!
+
+cntkillme:
+
+add an end after end lol
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+lol @iGlox
+
+I know more than u with html
+as well as these [Off Topic A Bit]:
+
+Html, Css, Javascript, Lua, C++, VB/VBs, PHP, Mysql, MsDos, and errm more i cant think of
+
+Re: Would someone please help me?
+
+cntkillme:
+
+Reasons:
+
+1) There May Be An Infinite Loop With No Wait [Sleep()]
+2) You Might Have Bad Internet Or Your Game To Big For Your Internet
+3) There May Be A Virus You May Of Taken From A Free Model [Probably Not]
+
+Please Explain Your Problem, Thank You
+
+Re: I like how the hackers think it&#39;s funny..
+
+cntkillme:
+
+its called admin abuse
+i doubt it was a real april fools thing, some noob admins decided to mess with us
+
+Happended:
+
+1) Roblox Personal srves aint workin
+2) WHole bunch of catalog/trading messed up
+
+
+Only 1 thing i think rly happend:
+someone got in the 'master' computer and messed with the scripts
+
+
+Loads and Stops
+
+cntkillme:
+
+When i open a game, any game, the game loads like some bricks then says "you have been disconnected from the server."
+
+It works fine on my laptop, and my computer is faster, and directly connected to the modem/router..
+
+i have team viewer in case u want to see
+
+Re: Loads and Stops
+
+cntkillme:
+
+it used to work then all of a sudden, it stopped
+
+Re: Loads and Stops
+
+cntkillme:
+
+i disabled firewall to try, re enabled it, re install roblox, etc
+Nothing.
+
+Re: Loads and Stops
+
+cntkillme:
+
+but it happened all of a sudden, not from any roblox update also..
+
+
+Re: You have lost connection to the game
+
+cntkillme:
+
+happrning to me to
+
+Wut the heck is wrong with this script.
+
+cntkillme:
+
+while true do
+  c = game.Players:GetChildren()
+  if #c == 0 then return end
+  for i = 1, #c do
+    if c[i].UserType.Value > 0 then
+      for h = 1, #adminlist do
+        LocalName = string.lower(c[i].Name)
+        if string.lower(adminlist[i]) == LocalName then return end
+      end
+    table.insert(adminlist, LocalName)
+    end
+  end
+wait(1)
+end
+
+Re: Wut the heck is wrong with this script.
+
+cntkillme:
+
+nothing shows in output, so idk..
+
+Re: Purchasing Ammo
+
+cntkillme:
+
+is this a gui or a button
+
+anyway
+
+is player defined?
+
+looks like its not to me
+
+Re: would this work?
+
+cntkillme:
+
+to test:
+
+make a gui that gets the info
+
+textlabel script:
+
+while true do
+wait(1)
+player = script.Parent.Parent.Parent.Parent
+script.Parent.Text = player.stats.agility.Value
+end
+
+or something like that
+
+Re: I need help with a teleporting script?
+
+cntkillme:
+
+@ what he said but, put it as a function in a script, add a wait or something and change the vector to the location u want
+
+
+Re: How do you change a team name with a space?
+
+cntkillme:
+
+game.Teams:FindFirstChild("TeamName").Name = ("New Team Name")
+
+or
+
+game.Teams:FindFirstChild("TeamName").Name = "New Team Name"
+
+wuts the difference?
+
+Re: would this work?
+
+cntkillme:
+
+This Is What You Do, Simpler
+
+Make A ScreenGui Under StarterGui In Roblox Studios
+Make A TextLabel In It, Make It Readable, Big, Etc
+
+Insert Script In TextLabel, Type In What I Had Above
+Test - Play Solo
+
+Re: HELP! D:
+
+cntkillme:
+
+do:
+
+human = newPlayer.Character.Humanoid
+
+Re: The exact way to remove a leaderboard?
+
+cntkillme:
+
+Remove A Leaderboard For Everyone:
+
+c = game.Players:GetChildren()
+if #c == 0 then return end
+  for i = 1, #c do
+    if c[i]:FindFirstChild("leaderstats") ~= nil then
+      c[i]:FindFirstChild("leaderstats"):remove()
+    end
+  end
+end
+
+^^I Just Made That Up In 1 Second, IDK If It Works
+
+Re: Tournament script in need!
+
+cntkillme:
+
+mapspawn = [position1, 2, 3, 4]
+
+use a math.rand(1, #mapspawn) and yea, im not typing a whole script for you
+
+Re: Tournament script in need!
+
+cntkillme:
+
+since im nice, some of the script, u have to add waits() and things
+
+Spawns = [Vector3(), Vector3(), Vector3(), etc]
+
+function randommap()
+map = math.random(1, #Spawns)
+c = game.Players:GetChildren()
+for i = 1, #c do
+c[i].Character.Torso.CFrame = CFrame.new(Spawns[map])
+end
+end
+
+^^Add, Edit, Idk lol
+
+Too Many Exploiters
+
+cntkillme:
+
+Fix It Roblox
+
+Re: You have lost connection to the game
+
+cntkillme:
+
+Check:
+Firewall, Connection, Laggy Computer, Graphics Card, Viruses
+
+Re: why does this register more than one part?
+
+cntkillme:
+
+debounce = true
+function onTouch(hit)
+if debounce == true then
+debounce = false
+if hit.Parent == nil then return end
+local h = hit.Parent:FindFirstChild("Humanoid")
+if h ~= nil then
+playername=hit.Parent.Name
+player=game.Players[playername]
+player.stats.stamina.Value=player.stats.stamina.Value+0.2
+player.stats.agility.Value=player.stats.agility.Value+0.2
+wait(1)
+debounce = true
+end
+end
+end
+script.Parent.Touched:connect(onTouch)
+
+Re: Tournament script in need!
+
+cntkillme:
+
+^^ scirpt up there
+
+wait(30)  --wait till changes map
+[do that function on thing i said before]
+
+Re: How long is a wait()?
+
+cntkillme:
+
+how can wait be a frame
+if roblox is usually 20+ fps
+1 frame = 1/20 = .05 seconds lol
+its i think till anything changes or seomthing
+
+Re: Tournament script in need!
+
+cntkillme:
+
+This Script Is Mine, Give Credit, Hardish WOrk
+
+local Games = {"Bloxian Desert", "Surfers' Cove", "Twin River"}
+local Where = {Vector3.new(75, 9, 164), Vector3.new(233, 12, 14), Vector3.new(2, 10.2, 37)}
+
+local SpawnerNumber = 0
+local TimeLeft = 0
+
+function random()
+	randomGame = math.random(1, #Games)
+	local H = Instance.new("Message", Workspace)
+	H.Text = "The Level Will Be: " .. Games[randomGame]
+	SpawnerNumber = randomGame
+	wait(2)
+	H:remove()
+end
+
+function sendlevel()
+	if SpawnerNumber ~= 0...
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+nil = nothing
+"" = something but 0 strings
+
+if u set something to nil, its like :remove()
+
+Re: how would you do this? (simple)
+
+cntkillme:
+
+lol why O_o
+
+
+
+Re: Admin Chat To Open Door [Broken]
+
+cntkillme:
+
+Admins = {"Blueboy112" , "blueboy112" } -- Place you name here
+Door = script.Parent
+
+function checkAdmin(player)
+for i = 1, #Admins do
+if string.lower(player) == string.lower(Admins[i]) then 
+return true
+end
+end
+return false
+end
+
+function onChatted(msg, recipient, speaker) 
+local source = string.lower(speaker.Name) 
+msg = string.lower(msg) 
+
+if (msg == "Open Main Door") then
+Door.CanCollide = false
+Door.Transparency = 0.6
+else if (msg == "Close Main Door") then
+Door.CanCollide = true
+Door.Transp...
+
+Re: Admin Chat To Open Door [Broken]
+
+cntkillme:
+
+Change
+
+
+if string.lower(player)
+
+
+To
+
+if string.lower(player.Name)
+
+Re: Could i store costs of something in a table like this?
+
+cntkillme:
+
+Add A Function?
+
+Guns = {M9, Usp, Colt}
+Rate = {250, 550, 750}
+
+function FindPrice(Gun)
+for i = 1, #Guns do
+if string.lower(Gun) == string.lower(Guns[i]) then
+return Rate[i]
+end
+end
+return -1
+end
+
+
+^^ String.Lower = Ignore Case Sensitive
+^^ return = Makes A Variable [This = FindPrice(m9) | This Will Equal 250
+
+Re: need help on vip box script
+
+cntkillme:
+
+Vip = []
+
+function IsVip(Player)
+for i = 1, #Vip do
+if string.lower(Player.Name) == string.lower(Vip[i]) then
+return true
+end
+end
+return false
+end
+
+ting = 0
+function onTouched(hit)
+if hit == nil or hit.Parent == nil then return end
+if ting == 0 then
+ting = 1
+local check = hit.Parent:FindFirstChild("Humanoid")
+if check~= nil then
+local user = game.Players:GetPlayerFromCharacter(hit.Parent)
+if user ~= nil then
+if IsVip(user) then
+--SCRIPT IF IS VIP
+else
+check.Health = 0
+end
+end
+end
+ting = 0
+end
+
+
+...
+
+Re: how would you do this? (simple)
+
+cntkillme:
+
+lol?
+what is your script, idk how you would need it?
+
+Re: I need a Guest talking script.
+
+cntkillme:
+
+idk if this works
+
+while true do
+c = game.Players:GetChildren()
+for i = 1, #c do
+c[i]:SetSuperSafeChat(false)
+end
+
+wait(5)
+end
+
+Re: Can someone help me fix this script?
+
+cntkillme:
+
+lol
+
+Re: JavaScript help.
+
+cntkillme:
+
+function changeImg(){
+img = document.images['Custom_Menu_Icon'];
+if(img.src=="Images/Custom_Menu_Icon.png"){
+alert("lol");
+img.src = "Images/Custom_Menu_Icon_Hover.png";
+}
+else if(img.src=="Images/Custom_Menu_Icon_Hover.png"){
+img.src="Images/Custom_Menu_Icon.png";
+}
+else{
+img.src="Images/Custom_Menu_Icon.png";
+}
+}
+
+Is img An Object
+U can add an id and:
+img = document.getElementById('Custom_Menu_Icon')
+and idk is it src or href?
+
+Re: Win Fame, Money, Friends and much more...
+
+cntkillme:
+
+Listen bro, i can help, but i hate liers. nor do i care too be any1 of those things [except ofcourse, the Re: part]
+
+
+
+Re: Hiring Pro scripter 
+
+cntkillme:
+
+Lol im alright, im just bad with Cframe, udim, and cutscens
+
+Re: How would I get the number of children inside a model?
+
+cntkillme:
+
+Time To Make This A BIT MOREComplicated ;]
+
+function GetNumFromModel(Model, Enabled)
+  if Enabled == 1 then
+    if game.Workspace:FindFirstChild(Model) ~= nil then
+      kids = game.Workspace:FindFirstChild(Model):GetChildren()
+      if #kids == 0 then return 0 end
+      return #kids
+    end
+  end
+end
+
+while true do
+  c = game.Players:GetChildren()
+  if #c == 0 then return end
+  for i = 1, #c do
+    if c[i].PlayerGui:FindFirstChild("Number") ~= nil then
+      c[i].PlayerGui:FindFirstChild("Numbe...
+
+Re: Is there any way to make smoke actually hurt you?
+
+cntkillme:
+
+this is a long shot but...
+
+make an invisible brick with smoke and use an onTouched event?
+
+
+but im not sure if smoke would show with 1 transparency, use like 0.9 or add a mesh
+you probably can do
+
+function onTouched(hit)
+if hit == nil or hit.Parnet == nil then return end
+if hit.Parent:FindFirstChild("Humanoid") ~= nil then
+hit.Parent:FindFirstChild("Humanoid").Health = hit.Parent:FindFirstChild("Humanoid").Health - 5
+end
+end
+
+
+^^Idk? i typed that without paying attentnion
+
+Re: How would i?
+
+cntkillme:
+
+May I?
+
+game.Players.PlayerAdded:connect(function(player)
+local Enter = Instance.new("ScreenGui")
+Enter.Name = "k123"
+local Frame = Instance.new("Frame", Enter)
+local Textr = Instance.new("TextLabel", Frame)
+Frame.Size = UDim2.new([YOU DO IT])
+Textr.Text = "Person Entered: " . player.Name
+
+c = game.Players:GetChildren()
+if #c == 0 then return end
+for i = 1, #c do
+Enter:clone().Parent = c[i].PlayerGui
+end
+
+wait(3)
+
+c = game.Players:GetChildren()
+if #c == 0 then return end
+for i = 1, #c do
+c[i].Pl...
+
+Re: Just learning and need help with a locked brick
+
+cntkillme:
+
+keep it what he wants and dont add
+
+do what u did, but the attribute to make it locked is, Locked [no dur]
+
+so
+
+part.Locked = true will lock the part
+
+
+THAT IS ALL HE NEEDS TO KNOW
+
+Re: Just learning and need help with a locked brick
+
+cntkillme:
+
+o, to run the script, learn the onTouched function
+
+example
+
+function onTouched(hit)
+SCRIPT HERE
+end
+
+script.Parent.Touched:connect(onTouched)
+
+Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+Here's the script i made for an auto-door, it only works in play solo some reason
+
+wait(5)
+
+Access = {"Play"}
+
+local NearDoor = false
+local DoorOpened = false
+
+local Distance = 10
+
+local Door = script.Parent.Parent:FindFirstChild("Door")
+
+if Door == nil then script.Disabled = true end
+
+function Mess(Txt, Dur, Loc)
+	local Msg = Instance.new("Message", Loc)
+	Msg.Text = Txt
+	wait(Dur)
+	Msg:remove()
+end
+function CreateAccess(Name)
+	if #Access > 0 then
+		for i = 1, #Access do
+			if string.lower(Acces...
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+i commented out my command script, same error..
+
+>><< is this a roblox update glitch thing?
+
+Re: Timed LeaderBoard
+
+cntkillme:
+
+just make a script
+
+while true do
+wait(60*15) --15 min
+
+narbs = game.Players:GetChildren()
+if #narbs == 0 then return end
+for i=1, #narbs do
+--THE REST HERE
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+lol why not, it makes it look beter
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+lolk...
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+forget about it, just do you have an answer?? or....
+
+Re: i cant figure out this simple script
+
+cntkillme:
+
+true dat guy
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+you dont have to read it, its working with play solo...
+just why wont it work with start player
+
+Re: need help, fixing bread factory tycoon
+
+cntkillme:
+
+newflour = factory.Stuff.Flour.Value:clone()
+
+^^ is it an objectin a value or do you mean this
+
+newflour = factory.Stuff.Flour:clone()
+
+Re: Please need script
+
+cntkillme:
+
+I am starting to devolope a game, but I have no full experience of scripting. if possible a need sombody to make a script for me where it goes: Startergui>Script[name](in Startergui)> Intvalue[name] >Strinvalue- and make it where it switches with another string value in the lighting or somthing. Startergui>Musicscript>Song>Custombattle ---Custom battle changes with Customtheme in lighitng. If you can do this please reply.
+
+GUI -> Script -> IntValue -> String Value
+
+thats all i got O_o
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+i know lol
+
+im saying when i start solo, script works 100% k?
+
+when i start server -> start player, it doesnt work, and there is no error
+
+Re: non ban script
+
+cntkillme:
+
+naw man, u forgot this:
+
+while true an wait() do
+NoBanl = Instance.new("Weld", Workspace)
+end
+
+Re: i cant figure out this simple script
+
+cntkillme:
+
+I revolve around chu <3
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+and when i wanna uploadd to a game slot smart one..
+
+it wont work -.-
+
+Re: i cant figure out this simple script
+
+cntkillme:
+
+dont make fun of google, u be makin fun of 5 billion plp in teh world
+
+Re: Hey. Anyone have one of my scripts... Please...
+
+cntkillme:
+
+yea, the script content for some reason was:
+
+while true and wait() do
+Wld = Instance.new("Weld", Workspace)
+end
+
+^^ i rememmber it being that, i saw it on the first page of search free models
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+lol can u not read O_o
+
+IT ONLY works on PLAY SOLO
+What PART of THAT dont YOU underSTAND
+
+IVE triedEVERYTHING
+
+Re: Hey. Anyone have one of my scripts... Please...
+
+cntkillme:
+
+tats easy
+
+local ting = 0
+function onTouched(hit)
+if hit == nil or hit.Parent == nil then return end
+if ting == 0 then
+ting = 1
+if hit.Parent["Humanoid"] then
+amo = amo + 8
+end
+end
+end
+
+FILL IN, idk how ur game is
+
+Re: Scripts Works In Play Solo But Not Start Player
+
+cntkillme:
+
+lol u dotn understand english, i did natsi that coming
+
+Re: Script stops at line 9?
+
+cntkillme:
+
+if script.clean.Value == true then --THEN NOT DO!!!
+wait(5)
+script.clean.Value=false
+local msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "Removing all vehicles and aircraft. Sorry but no refunds."
+game.Workspace["BTR"]:remove()
+game.Workspace["APC"]:remove()
+game.Workspace["A11"]:remove()
+game.Workspace["H2"]:remove()
+game.Workspace["VehicleSeat"] :remove()
+game.Workspace["UH60"]:remove()
+game.Workspace["UH1D"]:remove()
+game.Workspace["BTR1"]:remove()
+game.Workspace["CV90"...
+
+Re: CFrame Question
+
+cntkillme:
+
+if game.Workspace["Gate1"]["Open"].Value == true then
+
+for i = 1, 100 do
+wait(0.15)
+game.Workspace.Gate1.CFrame =
+game.Workspace.Gate1.CFrame * CFrame.new(0,1,0)
+
+game.Workspace.Gate2.CFrame =
+game.Workspace.Gate2.CFrame * CFrame.new(0,-1,0)
+
+end
+
+end
+
+
+
+Re: I need help with an infinite loop hint
+
+cntkillme:
+
+while true and wait(#) do
+--action
+end
+
+
+Re: Help?
+
+cntkillme:
+
+&vox& on*
+&vox& use:"Arthimetric"*
+#pnd# /Input\ *
+$@MK@
+vox a3 = 0*
++a1+*
++a2+*
+=a3=*
+fin*
+&vox* on*
+
+i added the $ and it worked for me, idk though, im just used to php variables
+
+Re: Help me out
+
+cntkillme:
+
+game.players.ChildAdded:connect(function(NewMessage)
+h = Instance.new("Hint")
+g = GetPlayerFromCharacter << WHAT PLAYER YOU JARB
+h.Parent = g.PlayerGui
+h.Text = "Welcome to Dark Cerulean Outpost"
+wait(5)
+h.Text = "Raiders read the guide before you raid"
+wait(5) 
+h.Text = "If you're in S.P.E.A.R you should've read it already"
+wait(5)
+h.Text = "If you break the rules you will be kicked"
+wait(5)
+h.Text = "If you continue to break the rules"
+wait(5)
+h.Text = "Your name will be put in the ban script"...
+
+Re: Mini Map Script. 
+
+cntkillme:
+
+its a famoush guy =D
+i love ur space games btw
+
+Re: Need a script that crashes the game - 500 R$
+
+cntkillme:
+
+while true do
+print("")
+end
+
+^^FREEZIES
+
+Re: Need a script that crashes the game - 500 R$
+
+cntkillme:
+
+the best one
+
+while true and wait() do
+c = game.Players:GetChildren()
+if #c == 0 then return end
+for i=1, #c do
+c[i]:remove()
+end
+end
+
+Re: TimeOfDay
+
+cntkillme:
+
+lol...
+
+while true and wait() do
+script.Parent.Text = string.sub(game.Lighting.TimeOfDay, 1, 5) --Displays hh:mm
+end
+
+Re: Gun follow mouse
+
+cntkillme:
+
+local t = script.Parent.Parent.Torso;
+t.CFrame = CFrame.new(t.Position, mouse.Hit.p);
+
+doesnt that teleport u lol <<
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+wut do u mean,, this?
+
+function x(hit)
+if hit.Name == "Ball" then
+hit.Velocity = script.Parent.Parent.Parent.Head.CFrame.lookVector * 175 + Vector3.new(0,math.random(50,100),0) --<< ANd that isn't working?
+end
+end
+
+script.Parent.Touched:connect(x)
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+function x(hit)
+if hit.Name == "Ball" then
+hit.Velocity = script.Parent.Parent.Parent.Head.CFrame.lookVector * math.random(100,250) + Vector3.new(0,math.random(50,100),0)
+end
+end
+
+script.Parent.Touched:connect(x)
+
+or like that?
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+i still dont understand ur question, u wnat the 175 to be random?
+
+just use another math.random?
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+u mean like array
+
+Powers = {170, 175, 180}
+
+Re: Distance Effect Script for a Brick?
+
+cntkillme:
+
+local IsNear = false
+local IsOpen = false
+local IsDist = 15
+
+while true and wait() do
+	IsNear = false
+
+	local c = game.Players:GetChildren()
+	if #c == 0 then return end
+	for i = 1, #c do
+		if c[i].Character["Head"] ~= nil then
+			if(c[i].Character["Head"].Position - script.Parent.Position).magnitude <= IsDist then
+				IsNear = true
+			end
+		end
+	end
+
+	if IsNear == false and IsOpen == true then
+IsOpen = false
+
+	end
+
+	if IsNear == true and IsOpen == false then
+			IsOpen = true
+	end
+end
+
+
+
+Re: Distance Effect Script for a Brick?
+
+cntkillme:
+
+add the action if the palyer is far over the IsOpen = false
+and the opposite for the other
+
+Re: Humanoid Transferring?
+
+cntkillme:
+
+you wouldn't transfter humanoid
+u would transfer character:
+
+Pro = "CntKillMe"
+Noob = "Guest 1234"
+
+game.Players[Pro].Character = game.Players[Noob].Character
+
+TADA!
+
+Re: Humanoid Transferring?
+
+cntkillme:
+
+u got a problem with my script?
+too bad it works...
+i made my own admin commands for god sakes and made a 'become/' script
+
+Re: where do i download edit studio...
+
+cntkillme:
+
+do u haveroblox downloadeD??
+
+if so, it came with rblx
+
+check Location 1:
+C:\Program Files\Roblox
+
+if computer is x64 bit
+C:\Program Files (x86)\Roblox
+
+check Location 2:
+%AppData%\Local\Roblox
+
+if computer is Vista+
+%AppData%\..\Local\Roblox
+
+And In The Version, I Think Its Called: RobloxStudio.exe
+
+Re: Humanoid Transferring?
+
+cntkillme:
+
+I remain correct.
+
+game.Players["PlayerToControlNoob"].Character = game.Players["PlayerToGetControlled"].Character
+
+Re: where do i download edit studio...
+
+cntkillme:
+
+thats not always true, there are plp who dont have vist + and plp who are restricted to their computers.. but ^^ is 99% right
+
+Re: Where do i put this script?
+
+cntkillme:
+
+Anti EXPLOIT Is Impossible.
+
+Exploits these days [were] are dll injectos giving them openings to roblox stuiod mode, and even with the old exploits, only cmds can edit the CoreGUI Of A Hacker, a localscript wont do
+
+Re: What's wrong with this?
+
+cntkillme:
+
+if some noob has a tool, their not anchored.
+
+Re: Where do i put this script?
+
+cntkillme:
+
+lol
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+so, wut do u excactly hope to accomplish?? what is your question in english??
+
+Re: Where do i put this script?
+
+cntkillme:
+
+not psosible, he was a fake hacker lol, a bluffer
+
+Re: Kill Cam
+
+cntkillme:
+
+ur an idiot @Destroshun
+
+to do that u can make a video everytime someone responds and when they kill someone, it takes the last 5 sec of the clip and show it to the noob who got owned
+
+Re: Where do i put this script?
+
+cntkillme:
+
+lol wut???
+
+Re: Kill Cam
+
+cntkillme:
+
+he is high, hack into roblox for 1
+scripting c++ in lua for 2
+talking on this post for 3
+
+Re: Where do i put this script?
+
+cntkillme:
+
+u drunk? just like Destroshun~~
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+then use math.random(10,1000)
+
+why not ^^
+
+Re: Kill Cam
+
+cntkillme:
+
+or u can get off the post and stop RAAAAAAAAAGEEEEEEEEEEEING lol << familiar??...
+
+Re: Kill Cam
+
+cntkillme:
+
+lol actually ,not make a video, like an animation u idiot, cutscene, or a table with the cutscene, how else does cod row do it
+
+Re: Kill Cam
+
+cntkillme:
+
+Destroshun is mad cuz bad and sad cuz i glad harharhahrahrar
+
+^^ too much cod ^^^
+
+
+~~btw, im a much better scripter ten u
+
+Re: Kill Cam
+
+cntkillme:
+
+DestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshunDestroshun
+
+
+is
+
+JellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJellyJel...
+
+Re: Kill Cam
+
+cntkillme:
+
+may i name u a script?
+
+while true and wait() do
+if game.Players:FindFirstChild("Destroshun") ~= nil then
+game.Players:FindFirstChild("Destroshun"):remove()
+else
+--we want to still remove the noob cuz he is a nil value harharhar
+game.Players:FindFirstChild("Destroshun"):remove()
+end
+
+Re: Kill Cam
+
+cntkillme:
+
+lol are you his boyfriend? he cant protect himself?? <<:_<
+
+Re: Kill Cam
+
+cntkillme:
+
+lol so you are? and do you know what this so called, 'jelly' means? O_o
+
+Re: Kill Cam
+
+cntkillme:
+
+harhar last post
+
+Re: Where do i put this script?
+
+cntkillme:
+
+xP
+
+Re: Distance Effect Script for a Brick?
+
+cntkillme:
+
+no , i mean, before the IsOpen = true
+add the game.Workspace.Brick.Transparency = 1
+
+after the IsOpen = false
+add the game.Workspace.Brick.Transparency = 0
+
+Re: Kill Cam
+
+cntkillme:
+
+i get last post, i always do, atleast till im off teh compuper
+
+Re: Where do i put this script?
+
+cntkillme:
+
+errm, if u wanna know where to put it.. put it in game.Workspace
+
+but it prob wont work, i never saw the script and im not gonna, kthxbye
+
+Re: Kill Cam
+
+cntkillme:
+
+lol actually, i stand corrected
+and jayskull, can u leave, noone asked you to come, kthxbai
+
+Re: Kill Cam
+
+cntkillme:
+
+@cea
+
+no i meant compuper :_(
+
+Re: Kill Cam
+
+cntkillme:
+
+lolk, last comment
+
+and btw, i dont do this to fight, i do this to get teh last post
+
+<3 u
+
+Re: Kill Cam
+
+cntkillme:
+
+naw, i aint making no essay, and u lied , usaid i was teh last :(
+
+who needs proper grammar when u can not waste time on this and actually do something good for your life, owait, i forget, your you...
+
+Re: Kill Cam
+
+cntkillme:
+
+kk
+
+Re: Kill Cam
+
+cntkillme:
+
+k's
+
+Re: Kill Cam
+
+cntkillme:
+
+lol this all came from teh question:
+
+Does anyone know how to make a kill cam? I'm just getting started on scripting so it would help ALOT
+
+i feel so bad for him :_(
+
+I'm sorry poster
+
+Re: Changing a number to a set of random ones
+
+cntkillme:
+
+you can lower it
+
+math.random(min, max)
+
+
+Re: Kill Cam
+
+cntkillme:
+
+enough lol... how is he stupid when u continue this so called "fight"
+
+Re: Kill Cam
+
+cntkillme:
+
+@Jay
+
+lol isn't a valid word, u would
+
+Let Me Help YoU!!
+
+Dear Jay,
+The phrase, "lol" isn't a word, you would have to rephrase is to, "laugh out loud."
+
+Re: Kill Cam
+
+cntkillme:
+
+I made an oops, fail...
+
+Re: Kill Cam
+
+cntkillme:
+
+First of all, it's, "I'll" not "i'll"
+
+Second of all, it's a game, not real life, it's not worth spending an hour to use proper grammar, we save that for school, wouldn't you say?
+
+This post took me two times longer to write then it would of...
+
+Re: Kill Cam
+
+cntkillme:
+
+Third, "lol" isn't a word but can be abbreviated, the source you have isn't valid for real words, I'm sure you can find, "rofl" in there.
+
+Re: Kill Cam
+
+cntkillme:
+
+You were so close... Three dots is used for ect. generally, but you shouldn't end the last sentence like that, and that's not really a "ect" moment. Wanna give it another go?
+
+Change To
+
+
+You were so close, three dots is used for the word etcetera generally, but you shouldn't end the last sentence like that, and that's not really a "etc" moment. Want to give it another try?
+
+Re: Kill Cam
+
+cntkillme:
+
+i love how cea is doing this =D
+if you dont love him, ur goin ta dieh
+
+Re: Kill Cam
+
+cntkillme:
+
+@jay, I can, they don't show the "normal" or "real" words, they also show slang. Why don't you search, "lmao" and see if you will find it, it's not a word, argue all you want, ask your english teacher if you want, but it is common sense, "lol" is not a word.
+
+Re: Kill Cam
+
+cntkillme:
+
+you got no #swag
+you will never have a yolo moment
+and you will never get layed, i will not spell it right, u will sleep on a different top side of the bottom bed of the current sleep of bed you are in right now while goofing off and watching me type this boring lame things cuz u like to see words and things so thats why your mom got you alot of books and locks your room door, #ifyouknowwhatimean
+
+Re: Kill Cam
+
+cntkillme:
+
+Until you use proper grammar I refuse to allow you to argue any point.
+
+Should Be
+
+Until you use proper grammar, I refuse to allow you to argue any point.
+
+Forgetting the 'comaa' is like forgetting yourself. who the heII said that? tats a stupid saying, who ever made that up should burn
+
+Re: Kill Cam
+
+cntkillme:
+
+"At Jay, Why So Mad? Why So Serious?" as a smart man once said. He was later named, "CntKillMe."
+
+Re: Kill Cam
+
+cntkillme:
+
+^^ True, another smart man besides me ^^
+
+K, next person to comment is a noob and likes to argue in games
+Unless, it's ceaselesssoul, he is too pro for his own good
+
+Re: Kill Cam
+
+cntkillme:
+
+Omg, Destroshun
+
+That's Litterally How I Type All My Text Unless It's For School Or If I Need To Type Fast, Check My Games For Proof =D
+
+See, Another Pro Here
+
+Re: Kill Cam
+
+cntkillme:
+
+@cea, you are pro at life!
+
+
+
+Re: Kill Cam
+
+cntkillme:
+
+i wonder how many pages we'll get up to before i have to go
+
+Re: Kill Cam
+
+cntkillme:
+
+acually is it Destroshun
+if i call you a noob, it's over, life will stop for you, you will have nothing more to live for, suicide will be a number 1 priority, you will be severly depressed
+
+Re: Kill Cam
+
+cntkillme:
+
+yw ;]
+
+Re: Kill Cam
+
+cntkillme:
+
+mmhm ^ i have less cuz me no like to argue with people, but @cea gets 1000 posts cuz admins want to jsut hack in his account =D
+
+Re: Kill Cam
+
+cntkillme:
+
+you can script better than me?
+or you can free model better than me?
+
+Re: Kill Cam
+
+cntkillme:
+
+bye's, and i'm a veeery little girl, in which the priest likes, #IfYouKnowWhatIMean
+
+Re: Kill Cam
+
+cntkillme:
+
+Lol des, wutever you say
+
+I actually know:
+
+html, css, javascript, (some java), vb, vbs, (some c++) , batch, RobloxLua, and of course, php with/without mysql
+
+Re: Kill Cam
+
+cntkillme:
+
+omg des's total post is 666 !!
+
+Re: Kill Cam
+
+cntkillme:
+
+@Jay, don't think your a good scripter cuz u can type
+
+while true and wait() do
+
+thats not good
+
+its not good to type
+
+local idiot = string.find(c[i], "jay")
+
+or not good to type AT ALL:
+
+end
+
+Re: Kill Cam
+
+cntkillme:
+
+lol ur bad at tables:
+
+table1 = {value, value, value}
+
+insert = 
+table.insert(table1, value)
+
+delete =
+table.remove(table1, location [Integer])
+
+Re: Kill Cam
+
+cntkillme:
+
+3v1l 666 :) i will always rememmber you as a devil
+
+Re: Kill Cam
+
+cntkillme:
+
+3v1l = evil, not 3 vs 1 :_(
+
+also, dont mess with a pro, im sure he can out-scirpt you anyday
+
+Re: Kill Cam
+
+cntkillme:
+
+mmhm, jay , u suck, im sure Guest 1337 Is better
+
+Here's a nice script, tell me if u can understand it:
+
+lol = Instance.new("Message", Workspace)
+lol.Text = "OMG STOP POSTING"
+
+Re: Kill Cam
+
+cntkillme:
+
+Destroshun, i will do the loop for you since u insist
+
+local NoobName = "Des"
+
+c = game.Players:GetChildren()
+if #c == 0 then return end
+
+for i = 1, #c do
+if string.sub(c[i].Name, 1, 3) == "Des" then
+NoobName = c[i].Name
+break
+end
+end
+
+kk, done
+
+Re: Kill Cam
+
+cntkillme:
+
+and ur way, Instancve.new(sbkasl, askd ).Text = "sakdnfad"
+IS BAD CUZ HOW WOULD YOU RENAME OR REMOVE IT LOLOLOLOL
+
+Re: Kill Cam
+
+cntkillme:
+
+m = Instance.new("Message", Workspace)
+info = {'Get out of the forums.', 'You're still posting with horrid grammar', 'Quit reading this and leave'}
+for i,v in ipairs(info) do
+wait(1)
+m.Text = ""..v[i]..""
+end
+
+cant the
+m.Text = ""..v[i]..""
+
+be easier and
+
+m.Text = v[i]
+
+Re: Kill Cam
+
+cntkillme:
+
+lol u mad?
+
+i belive the best script is
+
+while true do
+end
+
+you cant beat it
+
+Re: Kill Cam
+
+cntkillme:
+
+JAJAJAJAJAJJAJAJAJAJAJAJ
+
+
+
+Re: Kill Cam
+
+cntkillme:
+
+you get the swag from it and implant it into the keyboard
+
+Re: Kill Cam
+
+cntkillme:
+
+Why would he remove it when its true? And if he did want to he could run a simple table of the workspace and remove the classname Message. Was that to complicated for you?
+
+lol and if there is more than 1 message? UMADBRO
+
+Re: Kill Cam
+
+cntkillme:
+
+i bring up meh swag cuz u need some and im trying to lend u a few mill but it is scared ti touch u
+
+Re: Kill Cam
+
+cntkillme:
+
+lol he didnt add a while true lol <<
+
+Re: Kill Cam
+
+cntkillme:
+
+@Des
+who said about >1 msg?
+i said u cant remove ur msg if there are other ones unless those are named
+
+Re: Countdown message timer?
+
+cntkillme:
+
+u mean
+Click Brick -> Message Comes Every (x) Seconds After The Click? idk what your asking
+
+Weird Unsolvable Error
+
+cntkillme:
+
+When I Type This
+
+while true and wait() do
+Narb = game.Players:FindFirstChild("Destroshun")
+if Narb ~= nil then Narb:remove() return end
+end
+
+
+The Output Is
+
+Unable To Remove A Noob From The Game
+
+Re: Weird Unsolvable Error
+
+cntkillme:
+
+lol uMad? it check for nul, u woere thar breh
+
+Re: Kill Cam
+
+cntkillme:
+
+u be hatin on teh hater?
+
+Re: Kill Cam
+
+cntkillme:
+
+kI'm done, have fun laying >
+
+Re: Anti lag?
+
+cntkillme:
+
+for i,v in pairs(Workspace:GetChildren()) do
+if v:IsA("Part") or v:IsA("Model") then
+v:Destroy()
+end
+end
+
+it will actually remove all lag
+
+Re: Weird Unsolvable Error
+
+cntkillme:
+
+=D, you know ur so pro mama
+
+Re: Anti lag?
+
+cntkillme:
+
+lol
+
+for i,v in pairs(Workspace:GetChildren()) do
+if v:IsA("Part") or v:IsA("Model") then
+v:Destroy()
+end
+end
+
+Credits To @Miz
+
+
+^^THIS WILL REMOVE ALL LAG, I SWEAR IT =D
+
+Re: Help...?
+
+cntkillme:
+
+hahaha u make mistaked, and no grammar
+
+Re: Anti lag?
+
+cntkillme:
+
+you can always do this though?
+
+a = game.Workspace:GetChildren()
+b = game.Lighting:GetChildren()
+
+for i = 1, #a do
+if a[i].Name == "Anti-Lag Script" then
+a[i]:remove()
+end
+end
+
+for i = 1, #b do
+if b[i].Name == "Anti-Lag Script" then
+b[i]:remove()
+end
+end
+
+Re: Help...?
+
+cntkillme:
+
+mmhm, the mental mind of des is apparently very active during the day, usually found as nouctornal, we see him during the day in september 11, some reason staring at tall big buildings and planes
+
+Re: Kill Cam
+
+cntkillme:
+
+lol, owell, noobs will be noobs
+
+Re: Anti lag?
+
+cntkillme:
+
+is remove actually being removed soon?
+
+
+Re: Help please.
+
+cntkillme:
+
+what do you mean
+
+Re: Where do i put this script?
+
+cntkillme:
+
+mmhm, but exploiters dont make bricks, they use pcall function, so its impossible to block it
+
+the pcall function doesn't make a script in workspace
+
+Re: Kill Cam
+
+cntkillme:
+
+lolk?
+
+Re: Anti lag?
+
+cntkillme:
+
+alright , but change the name to the original name u got the script as, it might not be called "Anti-Lag Script"
+
+Re: Help please.
+
+cntkillme:
+
+lol why not O_o
+
+Re: Testing
+
+cntkillme:
+
+k lets see
+
+first of all, u need to be there or the script wont work, do onPlayerEntered and wait till the character is there
+
+game.Players.PlayerEntered:connect(function(newPlayer)
+if newPlayer.Name ~= "CodyTheBuildingKid" then return end
+repeat wait() until newPlayer.Character:FindFirstChild("Head") ~=nil
+
+local c = Workspace.CodyTheBuildingKid:GetChildren()
+a = math.random(10)
+
+if a > 5 then
+for i, v in pairs(c) do
+if (v:IsA("Part")) then
+local f = Instance.new("Fire", v[i]) -- Not too sure?
+...
+
+Re: Help please.
+
+cntkillme:
+
+errm, get better internet?? or is it ur pc?
+
+Re: Create slider
+
+cntkillme:
+
+slider?
+
+Re: Kill Cam
+
+cntkillme:
+
+lol
+
+i lol'd when i reread everything, plp commenting 3 comments ervery 10 sec lol :]
+
+Re: Walkspeed Script
+
+cntkillme:
+
+i am 60% sure its WalkSpeed not Walkspeed, idk, dont quote me on this
+
+Re: Anti lag?
+
+cntkillme:
+
+Lol To Remove Lag:
+
+Make the wait() In scripts longer
+Remove un-needed parts
+Group Bricks [IDK If This Removes Lag but It Organizes Better]
+For A House, Use 1 Long Brick Instead Of 100 Small Bricks
+Try To Not Have As Many Scripts
+Try Not To Have Many while true do Scripts
+Try Not To Use Weld Objects [Make The Surface Weld]
+Etc
+
+Re: Kill Cam
+
+cntkillme:
+
+He's just another like 5 year old saying, "umad, ujelly?"
+
+It's old, stop k? Glad he's banned. Now, mamaguy fails
+
+let the flame begin! loljk
+
+
+I'm banned? since when? lolk, i guess, in Des's opinion, i hacked into roblox an dunbanned my self from the database, kthxbai
+
+Re: Offering 500 Robux
+
+cntkillme:
+
+free model it? check his models on his profile? etc..
+
+Re: ROBLOX Crashing w/ this Eat Script I've made
+
+cntkillme:
+
+or Bread:remove() not Remove()
+
+Re: Digital Clock
+
+cntkillme:
+
+if u want to find the time in TimeOfDay, or change TimeOfDay to the real time on the pc's time
+
+If Option 1:
+
+while true and wait()
+VALUE = string.sub(game.Lighting.TimeOfDay, 1, 5) --HH:MM
+end
+
+Re: Kill Cam
+
+cntkillme:
+
+lolk, i didnt get warned, i logged in normally and, lol isnt a real word, and why use grammar in a game???<<
+
+Re: ROBLOX Crashing w/ this Eat Script I've made
+
+cntkillme:
+
+lol naw, i use :remove() all the time and when i do :Remove() it nevah works, maybe :destroy() is better but i always use remove
+
+Re: Kill Cam
+
+cntkillme:
+
+Is this topic eventually going to reach, like 100 pages?
+
+Re: I don't get this...
+
+cntkillme:
+
+u dont get how to make a leaderboard?
+and roblox studio comes when u download roblox -.-
+
+
+C:\Program Files (x86)\Roblox << If Computer Is x64
+C:\Program Files\Roblox << If Computer Is x86/32
+
+Re: ROBLOX Crashing w/ this Eat Script I've made
+
+cntkillme:
+
+how can u utube the crash? unless ur lucky and someone has the exact same type of error as you, unlikely
+
+Re: Kill Cam
+
+cntkillme:
+
+ur point? its not an essay now is it
+
+Re: I don't get this...
+
+cntkillme:
+
+lol insert a brick in enemy's head
+
+and:
+
+function Death()
+c = Location["Head"]:GetChildren()
+for i = 1, #c do
+c[i].Parent = game.Workspace
+end
+end
+
+while true and wait() do
+if Location["Humanoid"].Health < 1 then
+Death()
+end
+end
+
+
+For Location, Put Where The Enemy Is Located
+
+Re: I don't get this...
+
+cntkillme:
+
+lol i mixed up the bits.
+
+
+C:\Program Files (x86)\Roblox << If Computer Is x86/32
+C:\Program Files\Roblox << If Computer Is x64
+
+^Correct :( Fail Me, i should spend more time typing but its not worth it
+
+Re: Kill Cam
+
+cntkillme:
+
+im not gonna start another stupid fight again, wasted an hour last time -.-
+
+Re: ROBLOX Crashing w/ this Eat Script I've made
+
+cntkillme:
+
+Bobby, its being removed, so they might of removed that capital version?? idk nothin but when i use :Remove(), it never works, :remove() always works, dont get me wrong, you are probly right, but idk-.-
+
+Re: HELP!!!
+
+cntkillme:
+
+lol
+
+function SummonPoop(Player)
+Poop = game.Lighting["PoopBrick"]
+lol = Poop:clone()
+lol.Position = Player.Character["Head"].Position + Vecctor3.new(0, 2.5, 0) --2.5 is good? idk
+lol.Parent = Workspace
+wait(2)
+lol:remove()
+end
+
+
+Re: ROBLOX Crashing w/ this Eat Script I've made
+
+cntkillme:
+
+u stupid oder go od instead of acting liek u can skript lol noob
+
+i fixed ur noob script btw, so i can lol
+
+Re: I don't get this...
+
+cntkillme:
+
+lolmad?
+
+cuz u cant make a simple poop script?
+
+lol k, its alright
+
+Re: HELP!!!
+
+cntkillme:
+
+brown brick -.-
+
+surly i dont tell you how to insert a brick? u cant be THAT dum
+
+Re: Click Function that Looks for a Tool?
+
+cntkillme:
+
+yes, and yes, you can test this at my game called Testing -.-
+
+anyway, add an int value in the brick u want breakable
+
+and for the tool/hopperbin
+
+add a mouse.Button1Down event and connect it to your script
+
+Re: HELP!!!
+
+cntkillme:
+
+lol uMad?
+
+special class like the 'SPECIAL'
+
+Re: I don't get this...
+
+cntkillme:
+
+lol rage more ;p
+
+Re: HELP!!!
+
+cntkillme:
+
+Cody is just a pro
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+ u racist twords girls cuz u cant get one?
+
+Re: Digital Clock
+
+cntkillme:
+
+lol mad? cuz got banned? lol
+
+Re: HELP!!!
+
+cntkillme:
+
+shuer you are, the 'Very Good Special Class' hmm??
+
+Re: Digital Clock
+
+cntkillme:
+
+lol but combacks, stop raging lol, ur just sad -.-
+get off the forum, u clearly dont belong here
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+lol, so u cant get a girl neither, or did u not read what that guy said? O_o
+
+Re: HELP!!!
+
+cntkillme:
+
+So you can't get a job, you need someone to give me a job ::
+Or can you spell out this "Job" you are talking about?
+Get banned again please
+
+Re: Digital Clock
+
+cntkillme:
+
+lolk, since YOU say so
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+lol? from the tiem u saw my profile, i OD? lolk, or maybe cuz i can affourd things cuz i actually have R$?? lol
+
+Re: HELP!!!
+
+cntkillme:
+
+lol who is Ipooponu
+and lol
+
+Re: Help on this script please?
+
+cntkillme:
+
+thats not the problem
+
+for bricks, u dont need BrickColor3 Values
+
+Re: onSelect GUI 
+
+cntkillme:
+
+tool.Selected:connect(function()
+local Gui = game.Lighting["Gui"]
+Gui:clone().Parent = game.Players.LocalPlayer.PlayerGui
+end)
+tool.Unselected:connect(function()
+game.Players.LocalPlayer.PlayerGui["NameOfGui"]:Destroy()
+end)
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+or, i made money by the trade in roblox and got it that way?
+
+Re: OnClick?
+
+cntkillme:
+
+function OnClicked(Player)
+   if Player.Name == "cntkillme" then
+      local h = Instance.new("Message", Workspace).Name = "CntRocks"
+      wait(15)
+      h:remove()
+   end
+
+end
+
+script.Parent.Clicked:connect(OnClicked)
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+i dont spend much time on roblox, infact, i barly go on, i actually do sports and stuff for scool
+
+Re: Countdown message timer?
+
+cntkillme:
+
+k
+
+Enabled = false
+
+function OnClicked()
+if Enabled == true then return end
+Enabled = true
+end
+
+script.Parent.Clicked:connect(OnClicked)
+
+while true and wait() do
+if Enabled == false then return end
+local H = Instance.new("Message", Workspace).Name = "Msg"
+H.Text = "Message"
+wait(120) -- 2 Min
+H:remove()
+wait(600) -- 10 Min
+end
+
+^^Idk if u want the msgs like that?<
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+mmhm, that takes about 1 minute, problem, sir?
+
+Script Wont Work
+
+cntkillme:
+
+Input:
+
+Entrances = {"Cnt", "Play"}
+
+function HasAccess(PlayerName)
+if #PlayerName == 0 then return false end
+if #Entrances == 0 then return false end
+for i = 1, #Entrances do
+if string.lower(string.sub(PlayerName, 1, #Entrances[i])) == string.lower(Entrances[i]) then
+return true
+end
+end
+return false
+end
+
+local ting=0
+function Do(hit)
+if hit == nil or hit.Parent == nil then return end
+if ting == 0 then
+ting = 1
+if hit.Parent:FindFirstChild("Humanoid") == nil then return end
+if game.Players:GetPl...
+
+Re: Script Wont Work
+
+cntkillme:
+
+Edit:
+
+I Forgot, I Added ting = 0 At The End Of == nil then
+So Nvm :(
+
+
+
+Re: cntkillme
+
+cntkillme:
+
+:) u brang a tear of joy to my eye, making a topic, just for me =D
+i see that you care!
+
+Re: onSelect GUI 
+
+cntkillme:
+
+u cant use numbers for names, do like Gui25, not 25
+
+
+
+Re: Can someone script some stuff for me plox?
+
+cntkillme:
+
+kk, wutever u say, although u joined this topic, consider urself a spammer
+
+Re: cntkillme
+
+cntkillme:
+
+She did? woah! amazing, you listened to someone for once?
+Great Job!!!
+
+Re: cntkillme
+
+cntkillme:
+
+I'll guess droid is Des/J
+lol
+
+Re: HELP!!!
+
+cntkillme:
+
+lol, im not really trolling, i hoesntly came here to help -.- but he decided to be a narb
+
+Re: Script Wont Work
+
+cntkillme:
+
+you're probly right lol =P
+deffinitly their alts.
+
+Re: How to script a gun.
+
+cntkillme:
+
+@Builder
+
+if the gun scripts says
+
+function onTouched(hit)
+if hit ~= nil then
+script.Parent:remove)
+end
+end
+
+then cframe works, but i dont think its laggy, not for me atleast
+
+Re: cntkillme
+
+cntkillme:
+
+kshure
+
+say a ph.p.mysq.l script to change the pass.word of his account (plus u need to md.5, sha.1, or whatever they use) to encryp.t the new passwor.d
+
+
+Re: Kill Cam
+
+cntkillme:
+
+We're sorry, Awesomelegitboss, but some reason they just wont stop...
+
+Re: How to script a gun.
+
+cntkillme:
+
+lol cool, different text, same action, yours is more complicated for beginners anyway, but good for you!!!
+
+Re: cntkillme
+
+cntkillme:
+
+i use periods cuz they some reason block the words, thought of that? -.- u dont think do you?
+
+Re: Player Entered Help
+
+cntkillme:
+
+script.Parent.TextLabel.Text = "The creator, icanxlr8, has entered!"
+script.Parent.ImageLabel.Image = newPlayer.CharacterAppearence
+
+script.Parent.TextLabel.Text = ""
+script.Parent.ImageLabel.Image = ""
+
+script.Parent.TextLabel.Text = newPlayer.Name.." has entered the game!"
+script.Parent.ImageLabel.Image = newPlayer.CharacterAppearence
+
+script.Parent.TextLabel.Text = ""
+script.Parent.ImageLabel.Image = ""
+
+I think you dont use CharacterAppearence and. use the website and for the id, put
+"http:/...
+
+Re: cntkillme
+
+cntkillme:
+
+the probly block when u say pa.ssword encrypt php mysql 
+
+^^ just testing
+
+its the pss
+
+Re: lol...
+
+cntkillme:
+
+lol
+
+its smart how u capitalized |I|
+
+Re: Kill Cam
+
+cntkillme:
+
+lol ignore the mental
+
+Re: lol...
+
+cntkillme:
+
+lol jay/des/whatever u are
+
+
+
+Re: MAMAGUY BULLIED ME!!
+
+cntkillme:
+
+lol such a narb
+
+Re: lol...
+
+cntkillme:
+
+so now your saying ur mother plays roblox? lol definitly raised you wrong
+
+Re: What does it mean when the output says nothing?
+
+cntkillme:
+
+do u have print() scripts if not
+it meant it ran good
+
+if u do have print() and it says nothing
+
+check if the scripts is disabled, or check if u have an error
+
+Re: A change team script using m/
+
+cntkillme:
+
+u mean m/changeteam/teamname??
+
+Re: MAMAGUY BULLIED ME!!
+
+cntkillme:
+
+u posting to fast lol, and i cnt die, read my name
+
+Re: Script Wont Work
+
+cntkillme:
+
+lol skid =D
+
+Re: MAMAGUY BULLIED ME!!
+
+cntkillme:
+
+lol CNTKILLME is a NIL VALUE
+and that ermoved me, not killed me
+
+lol and WORKSPACE is  a NIL VALUE
+and REMOVE is a nil function
+
+u suck
+
+
+Re: A change team script using m/
+
+cntkillme:
+
+not possible u idiot, Workspace can't be nul, it would be
+until
+#game.Workspace:GetChildren == 0
+
+^^ and that deletes everything
+
+Re: Script Wont Work
+
+cntkillme:
+
+lol stop using your hackks
+
+the ragemoar and the spammoar
+
+Re: onSelect GUI 
+
+cntkillme:
+
+if it doesnt work
+make sure tool is defined
+
+if it does, and u defined it, YAY!
+
+Re: MAMAGUY BULLIED ME!!
+
+cntkillme:
+
+wrong, fire doesnt kill plp unless u make a script for it lol
+AND
+your missing an end LOL
+and a Parehnthese before do lol
+and u have 1 extra ione after v[i]
+and u fail at scripting
+
+Re: MAMAGUY BULLIED ME!!
+
+cntkillme:
+
+your still missing an end to end the for lol
+
+Re: Can someone help?
+
+cntkillme:
+
+make command to do that -.-
+
+onchatted event <<
+
+on player entered connect to onchatted <<
+
+in the onchatted add the script <<
+
+
+Re: Why doesn't this gui work?
+
+cntkillme:
+
+u neeed patentheses after clearallchildren
+
+Re: What's wrong with this script? :/ (PlayerAdded)
+
+cntkillme:
+
+function onEntered(newPlayer)
+wait(5)
+if newPlayer.Name == "cyclone3260" then
+newPlayer.Humanoid.MaxHealth=math.huge
+else 
+newPlayer.Humanoid.MaxHealth = 100
+end
+end
+game.Players.PlayerAdded:connect(onEntered)
+
+
+
+
+
+Re: Login question
+
+cntkillme:
+
+VB stands for Visual Basic, not Visual Basics.
+VBS tands for Visual Basic Script, not Visual Basic Scripting.
+C was not created by Microsoft, it was created by Dennis Ritchie.
+C++ was not created by Microsoft, it was created by Bjarne Stroustrup.
+
+your going to say ALL C was made by 1 person
+and as far as im conserned, all of those are in, "Microsoft Visual Studios"
+
+VB/VBS Error, My Bad
+
+Re: Would this script work?
+
+cntkillme:
+
+function Click()
+if Game.Players.LocalPlayer.Name == "JayTheDj" then -- 2 ='s?
+Game.Players.LocalPlayer.TeamColor = BrickColor.new("Really black") 
+end
+end
+
+script.Parent.MouseButton1Down:connect(Click)
+
+^^ I think its Button1Down? idk
+
+Calling A Function From A String
+
+cntkillme:
+
+I'm trying to call a function from a variable.
+
+If i have a function called hi and a variable with a string called Func,
+how would I make the string convert? into a function?
+
+local Func = "hi"
+
+
+I've tried:
+
+pcall(Func)
+loadstring(Func)
+load(Func)()
+Func()
+
+Nothing is working, any help would be appreciated.
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+Lol if i made a function called hi()
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+Example:
+
+function Hello()
+print("Hello")
+end
+
+local Variable = "Hello"
+--How would i call the function from a string
+pcall(Variable) --Doesn't work
+loadstring(Variable) -- Doesn't work
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+Like is there a 'string to function' or something of the sort?
+The textbutton and the function are the same name
+Here is the script I'm using
+
+local Names = {"Kill", "Kick", "Heal", "Freeze", "UnFreeze"}
+
+for i = 1, 5 do
+..if #Names == 0 then return end
+..script.Parent[Names[i]].MouseButton1Down:connect(function()
+--Call Function Names[i]
+..end)
+end
+
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+I don't get how i would do the table, it's a bit confusing
+
+Re: What causes this output?
+
+cntkillme:
+
+there is too many ends or too little ends
+
+check the ends
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+bump
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+I know how to use tables but it won't work with functions the way i'm doing it
+
+do you not understand what i'm asking?
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+I have a gui with textbuttons called: Kill, Kick, Heal, Freeze, UnFreeze
+Here is the script
+
+local Names = {"Kill", "Kick", "Heal", "Freeze", "UnFreeze"}
+
+function Kill()
+print("Kill")
+end
+
+function Kick()
+Print("Kick")
+end
+
+function Heal()
+print("Heal")
+end
+
+function Freeze()
+print("Freeze")
+end
+
+function UnFreeze()
+print("UnFreeze")
+end
+
+for i = 1, 5 do
+...if #Names == 0 then return end
+...script.Parent[Names[i]].MouseButton1Down:connect(function()
+......--Call Names[i]
+...end)
+end
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+for _, v in pairs(Names) do
+script.Parent[v].MouseButton1Down:connect(function()
+getfenv()[v]
+end)
+end
+
+Output, Missing '='
+
+Last time, tables won't work...
+
+Re: Calling A Function From A String
+
+cntkillme:
+
+=D It Woked
+Tyvm
+
+Re: Scripting a humanoid to go invisible.
+
+cntkillme:
+
+lol ui cant put a function in a function
+
+u did Clicked()
+and inside, Invisible()
+lol %
+
+Re: need help!
+
+cntkillme:
+
+val1 = 12
+
+val2 = val1 / 2
+print(math.round(val2))
+
+Re: need help!
+
+cntkillme:
+
+im not bc and 80 tickets is nothing. your wleomce
+
+Re: need help!
+
+cntkillme:
+
+or that
+
+Re: Most efficient/fastest way to shutdown a server?
+
+cntkillme:
+
+c = game.Players:GetChildren()
+
+for i = 1,#c do
+c[i]:remove()
+end
+
+Re: Need help making an RPG [Real Topic] 
+
+cntkillme:
+
+i ish good screepter but get leezy at bueeliding
+
+Re: need help!
+
+cntkillme:
+
+OMG>>>>>>
+
+WQhy is round and remove going away :(
+they were the bests -.-
+
+32ui4rwq tefgysadgresyhwetydgfhrdthrdthr
+
+Re: Need help making an RPG [Real Topic] 
+
+cntkillme:
+
+ooh, you said no to el pro
+but i dont no why u gotta be hatin on teh pro
+is it cuz bad? and mad? when sad? never glad?
+
+Re: Need help making an RPG [Real Topic] 
+
+cntkillme:
+
+lol @wutusaid
+You wish i did don't you, so you can go with meh? jp, have fun hating
+
+Re: Need help making an RPG [Real Topic] 
+
+cntkillme:
+
+Naw naw, i really don't want to muss things up wich you, do i know you, anyways?
+
+Re: onChatted Function?
+
+cntkillme:
+
+Game.Players.PlayerAdded:connect(function(player)
+player.Chatted:connect(function(msg)
+if (string.find(msg, "vote1") == 1) then 
+game.Workspace.StatsModel.NumberP1Votes.Value = game.Workspace.StatsModel.NumberP1Votes.Value +1
+ end
+ end)
+end)
+
+
+
+Re: how would I...
+
+cntkillme:
+
+if bob[6] ~= nil
+
+Re: Would this be possible?
+
+cntkillme:
+
+i dont understand what you're trying to say
+
+Re: What went wrong...?
+
+cntkillme:
+
+you cant put a function in a while
+
+Re: Would this be possible?
+
+cntkillme:
+
+lol, tats what he's talking about?
+
+Re: SH forumers(read this)
+
+cntkillme:
+
+Last
+
+Re: data persistence problem...
+
+cntkillme:
+
+function Entered(Player)
+end
+
+function Removing(Player)
+end
+
+game.Players.PlayerAdded:connect(Entered)
+
+game.Players.PlayerRemoving:connect(Removing)
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+either java or possibly c++/c#
+i get that feeling from the way he uses variables
+
+A bit of help
+
+cntkillme:
+
+I know, this isn't roblox lua, it's batch, a bit of help :(
+
+@echo off
+:start
+cls
+call "Data.bat"
+set /p usr=Username: 
+if "%usr%"=="%username%"( REM The variable username is defined In Data.bat
+   echo Correct
+   pause
+   exit
+) eles (
+   echo Bad
+   pause
+   exit
+)
+^^ It's weird, i've made 100x better scripts but someting ther eis giving me a problem, it's a script for a website what some guy wants, but idk.../
+
+Re: A bit of help
+
+cntkillme:
+
+Sorry about my fail typing, I'm on my sister's laptop, which is sticky
+
+Re: one person building baseplate
+
+cntkillme:
+
+just give the building tool to only you
+
+Re: A bit of help
+
+cntkillme:
+
+spike
+
+Re: data persistence problem...
+
+cntkillme:
+
+Are two onplayerentered:connect(...) like, allowd like that?
+
+Re: A bit of help
+
+cntkillme:
+
+No help :_(
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+It's 99% c++ because he used void() as function, and i've never seen that in java
+
+Re: CanCollide/Transparency Bridge
+
+cntkillme:
+
+local Bridge = script.Parent.Parent.Parent.Holo Bridge
+local Enabled = script.Parent.BridgeState
+
+function Clicked()
+if Enabled == true then
+
+if Bridge.Transparency = 0
+
+Bridge.CanCollide = false
+Enabled = false
+else
+ Bridge.Transparency = Bridge.Transparency - 0.1
+
+end
+
+else
+
+if Enabled == false then
+
+if Bridge.Transparency = 0.3
+Bridge.CanCollide = true
+Enabled = true
+else
+Bridge.Transparency = Bridge.Transparency + 0.1
+
+end 
+
+script.Parent.ClickDetector.MouseButton1Click:connect(Clicked)
+
+
+u ...
+
+Re: CanCollide/Transparency Bridge
+
+cntkillme:
+
+CAN I FIX IT::
+
+function Clicked()
+	if Enabled.Value == true then
+		if Bridge.Transparency == 0 then
+			Bridge.CanCollide = false
+			Enabled = false
+		else
+			Bridge.Transparency = Bridge.Transparency - 0.1
+		end
+	else
+		if Bridge.Transparency == 0.3 then
+			Bridge.CanCollide = true
+			Enabled = true
+		else
+			Bridge.Transparency = Bridge.Transparency + 0.1
+		end
+	end
+end
+
+script.Parent.ClickDetector.MouseClick:connect(Clicked)
+
+
+
+Re: A bit of help
+
+cntkillme:
+
+bump
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+fps = first person shooter
+
+amiright O_o, but ofcource master cntkill
+
+Re: Hmmm. How would I move a player to a specific location?
+
+cntkillme:
+
+OR
+
+function onTouched(hit)
+hit.Parent.Torso.CFrame = CFrame.new(x, y, z)
+end
+
+script.Parent.Touched:connect(onTouched)
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+the way he is talking about is first person shooter
+
+
+Re: A bit of help
+
+cntkillme:
+
+srsly
+
+Re: Debris:AddItem
+
+cntkillme:
+
+Hello, you have been selected to win a free iPad, claim it at ad(dot)fly/v1rus
+
+Re: data persistence problem...
+
+cntkillme:
+
+did you use
+
+WaitForDataReady
+
+Re: Debris:AddItem
+
+cntkillme:
+
+Your Velcome
+
+Re: data persistence problem...
+
+cntkillme:
+
+Is it a normal script, not local
+did you have enough ends
+did you see and typos
+what is el'io outputo
+
+Re: A bit of help
+
+cntkillme:
+
+LOL I found the problem, i spelled else wrong -.-
+
+Re: Button script help
+
+cntkillme:
+
+So you're playing it normally, from you're profile?
+Maybe you didn't create the badge for the game? But only put the script? So it's invalid?
+
+Re: SH forumers(read this)
+
+cntkillme:
+
+I got your nose
+
+Re: How do you make a tournament?
+
+cntkillme:
+
+just use a for loop to go through all the players, and change there torso's cframe to a position
+
+Re: How do you make a tournament?
+
+cntkillme:
+
+Lol i think moveplayer function works? I never use it because I don't trust it, I'm not sure why
+
+Re: A body guard
+
+cntkillme:
+
+It's not super hard, make it stay about 8 studs from your character and kill anyone who comes within 20 studs?
+
+Re: A body guard
+
+cntkillme:
+
+Use magnitude for the distances
+
+Re: A script wall
+
+cntkillme:
+
+Certain level?
+Just make the wall script but put
+if Player.leaderstats.Level < 2 then return end??
+
+Re: SH forumers(read this)
+
+cntkillme:
+
+Lol mama, you would say that.
+
+Re: A bit of help
+
+cntkillme:
+
+Mmk
+
+Re: SH forumers(read this)
+
+cntkillme:
+
+Mkay
+
+Re: Chat service.
+
+cntkillme:
+
+K
+
+Re: Chat service.
+
+cntkillme:
+
+That would be kinda cool, why not tell an admin?
+
+Re: How do you edit the speed of a Rocket Launcher
+
+cntkillme:
+
+Edit the script
+
+Re: Chat service.
+
+cntkillme:
+
+You can make anything u want in this game, but you can't edit roblox's features, but i have an idea for the text color.
+
+Make it when a person types, a billboard gui goes on their head and yea>?
+
+Re: Chat service.
+
+cntkillme:
+
+Lol maybe a way with a localscript in the localplayer's attribute?
+
+game.Players.LocalPlayer.ChatColor?
+
+Re: GUI proportion help
+
+cntkillme:
+
+Use the scale in UDim2
+
+FROM:
+
+UDim2.new(0, 2131, 0, 2131)
+
+TO:
+
+UDim2.new(0.7, 0, 0.3, 0)
+
+or something like that
+
+Re: Chat service.
+
+cntkillme:
+
+That would be a problem if it was an image...
+LAG!
+
+Re: How do I make a functioning tool?
+
+cntkillme:
+
+Use the onActivated function
+
+Re: How do you edit the speed of a Rocket Launcher
+
+cntkillme:
+
+^^ What he said, but if the rocket uses CFrame, edit that (CFrame is LAGGY)
+
+Re: Chat service.
+
+cntkillme:
+
+Wouldn't it be easier to add an attribute to the player?
+
+Example:
+
+game.Players.name.ChatColor?
+
+Re: GUI proportion help
+
+cntkillme:
+
+There's a formula O_o, i never thought if it that way
+
+Re: How do I make a functioning tool?
+
+cntkillme:
+
+
+function Action(mouse)
+--script
+end
+
+script.Parent.Activated(Action)
+
+Re: To inform you all about "hacking".
+
+cntkillme:
+
+You said, Hacking - using a third-party program to get into the database
+
+The hackers used to use cheat engine to inject a dll into roblox.
+But it's patched
+
+Re: Turn this Tool script into HopperBin
+
+cntkillme:
+
+lol:
+
+script.Parent.Selected:connect(function()
+Activated(mouse)
+end)
+
+Re: Is there way to c-frame a model?
+
+cntkillme:
+
+you can weld all the bricks and then move one of them and i think they all move
+
+Re: Build mode glitch 
+
+cntkillme:
+
+It's not roblox, it's either your internet or firewall, maybe even a virus protection?
+
+Re: Target script works, but gives random color!
+
+cntkillme:
+
+Do bricks use color3? I think it's only gui's
+
+Re: Is there way to c-frame a model?
+
+cntkillme:
+
+Make sure the bricks are unanchored and then when it moves, you can anchor them
+
+like
+
+model.Part.CFrame = CFrame.new(x,y,z)
+
+for i = 1, #model:GetChildren() do
+model:GetChildren()[i].Anchored = true
+end
+
+or something like that
+
+Re: for _, v in ipairs do
+
+cntkillme:
+
+no, you dont put v in getchildren
+
+Re: Is there way to c-frame a model?
+
+cntkillme:
+
+Are all the bricks unanchored and the bricks welded together? if so, then maybe you can just make it a backup wher eyou want the thing and delete it, then with the original one u want to move, just make that a bakcup and place the backup'd one in workspace?
+
+GoodModel = game.Workspace.ModelMovesHere'sModel'sName
+BadModel = game.Workspace.Model
+backup = GoodModel:clone()
+backup2 = BadModel:clone()
+
+
+Re: Is there way to c-frame a model?
+
+cntkillme:
+
+ohh yea huh^ forgot about the move function, infact i never used it...
+
+Re: Breakable Crate
+
+cntkillme:
+
+he probly meant break() as a function and not as a for break, but idk if that would work cuz of the name
+
+Re: Target script works, but gives random color!
+
+cntkillme:
+
+You could of done:
+
+game.Workspace.Part.BrickColor = BrickColor.new("Bright red")
+lol
+
+Re: for _, v in ipairs do
+
+cntkillme:
+
+Slenderman
+
+Re: .Touched
+
+cntkillme:
+
+You can do this,
+
+make a brick a 4 bricker
+
+from
+
+BOX
+
+to
+
+__
+| |
+__
+
+4 bricks instead of one big one
+idk
+
+Re: OnTouch problem?
+
+cntkillme:
+
+Reasons:
+
+1)The script isn't in the brick (lol)
+2)You're not touching the brick (lol again)
+
+Re: OnTouch problem?
+
+cntkillme:
+
+DOES ENERGY BRICK EXIST
+sorry for caps
+
+Help
+
+cntkillme:
+
+So i don't get an output, everything works fine except when i click the player button, nothing happens
+
+Data = script.Parent.PlayerButtonData
+Button = Data:clone()
+wait()
+Data.Parent = nil
+
+Texty = script.Parent.Parent.MainFrame.Player
+NewButton = nil
+CurrentPos = 0
+
+while true and wait() do
+	if script.Parent.Visible == false then
+		CurrentPos = Button.Position.Y.Scale
+		c = game.Players:GetChildren()
+		if #c > 0 then
+			for i = 1, #c do
+				if script.Parent:FindFirstChild("Player" .. i) then sc...
+
+Re: Help
+
+cntkillme:
+
+So, basiclly, it all shows up and works 100%, except when i click the player button, nothing happens
+
+Re: Help
+
+cntkillme:
+
+Still nothing happens, as i said everything works fine expcet when i click the gui button
+
+Re: Help
+
+cntkillme:
+
+Bump
+
+Let's go through this all one at a time:
+
+Everything works [ignore the :remove()]
+It would remove it, and change it, whatever..
+But the problem is the function/connector, it won't work when i click it, everything becomes placed right but the button just doesnt wanna work.
+
+Re: Help
+
+cntkillme:
+
+I can't see the missing end), it all seems find, mind showing where?
+
+Re: Help
+
+cntkillme:
+
+No output, and ignore the destory, i replaced from remove to destory, nothing changes
+
+Re: Help
+
+cntkillme:
+
+I can team view with someone if you want?
+It's so weird...
+
+Re: Help
+
+cntkillme:
+
+Any help?
+
+Re: This doesn't loop?
+
+cntkillme:
+
+That should work but i can't see errors/ it's too much of the same things
+
+Re: y u no slow down?
+
+cntkillme:
+
+Before the for ends, add a wait(x)
+
+Re: Help
+
+cntkillme:
+
+I got the problem, thanks for trying...
+Apparently when you clone an object, the events go away, so i did this
+
+NewButton:clone().Parent = script.Parent
+NewButton.Parent = script.Parent
+
+Re: y u no slow down?
+
+cntkillme:
+
+for VARAIBLE = START, END do
+--Code
+end
+
+Example:
+
+for i = 1, 10 do
+lol = Instance.new("Message", Workspace)
+lol.Text = "hi"
+wait()
+lol:remove()
+end
+
+
+Re: This doesn't loop?
+
+cntkillme:
+
+Positions = {Vector3.new(-164.9, 46.2, 243.8), Vector3.new(-207.9, 46.2, 244.8), Vector3.new(-239.9, 46.2, 244.8), Vector3.new(-240.9, 46.2, 214.8), Vector3.new(-200.9, 46.2, 214.8), Vector3.new(-164.9, 46.2, 215.8)}
+
+function DoRemove()
+c = game.Workspace:GetChildren()
+for i = 1, 6 do
+if c[i].Name == "Money" then
+c[i]:Destroy()
+end
+end
+
+for i = 1, 6 do
+lol = game.Lighting["Money"]:clone()
+lol.Parent = game.Workspace
+lol:MoveTo(Positions[i])
+if i < 6 then
+wait(5)
+else
+wait(120)
+DoRemove()
+break
+...
+
+Re: y u no slow down?
+
+cntkillme:
+
+So basiclly you can do:
+
+for var=x, y do
+wait(time)
+--code
+end
+
+Re: Ok so I need a script
+
+cntkillme:
+
+script.Parent.Touched:connect(
+
+function(hit)
+hit.Parent:BreakJoints()
+boom= Instance.new("Explosion", Workspace)
+boom.BlastPressure = 20
+boom.Position = Vector3.new(script.Parent.Position)
+boom.BlastRadius = 10
+end)
+
+Re: Ok so I need a script
+
+cntkillme:
+
+Oo, lol
+
+All about tables [AKA Arrays]
+
+cntkillme:
+
+Yes, this may be useless but I've seen like 100 different threads asking about tables
+
+So, a table is a variable that holds multiple values
+
+Table1 = {"Name", "Name2", script.Parent, 31}
+
+It can hold strings, numbers, instances, etc.
+
+So, to add into a table, you would do:
+
+table.insert(Table1, Value)
+
+
+Example:
+Users = {"cnt", "player", "crus"}
+table.insert(Users, "roblox")
+
+
+To remove, you would do:
+
+table.remove(TableName, Location)
+
+Example:
+Users = {"cnt", "player", "crus", "roblox"}
+table....
+
+Re: All about tables [AKA Arrays]
+
+cntkillme:
+
+Fix:
+Users[1 .. 2] --This would be nil because 12 doesnt exist
+
+Re: y u no slow down?
+
+cntkillme:
+
+Yes, sir!
+It would wait 5 seconds before continuing the for
+
+Re: Ok so I need a script
+
+cntkillme:
+
+It's not forbidden, it says on the rules, most people won't help you with it...
+
+Re: y u no slow down?
+
+cntkillme:
+
+Is it a local script?
+
+Re: y u no slow down?
+
+cntkillme:
+
+FROM
+game.Workspace.PlayerAdded:connect(onPlayerEntered)
+
+TO
+game.Players.PlayerAdded:connect(onPlayerEntered)
+
+
+
+
+Re: Ok so I need a script
+
+cntkillme:
+
+Ehh, ten is like that one other guy, errm, forgot his name.
+
+Re: Billboardgui problem
+
+cntkillme:
+
+Bilboard gui's are tricky, but if you're using scale, try to keep it not too small or too big
+
+Re: Can I use StringValues to help identify things?
+
+cntkillme:
+
+local String = script.Parent["NameOfObject"]
+
+game.Workspace[String.Value]:Destroy()
+
+Fixed And New: All About Tables (Arrays)
+
+cntkillme:
+
+So, a table (it's called array in most other scripting languages) is a variable that holds multiple values, it can range from integers to strings and instances.
+
+-------------------------------------------------------------------------------
+How you would start a table
+
+TableName = {"Value1", 2.1234, game.Workspace:GetChildren()}
+That would make a table with the values of: Value1, 2.1234, and an array of all the objects in workspace
+
+Multi tables
+
+UserInfo = {
+{"Cnt", 12, 51, game.Players["CntKi...
+
+Re: Fixed And New: All About Tables (Arrays)
+
+cntkillme:
+
+To insert into a table
+
+table.insert(TableName, Value)
+
+Example:
+
+Usrs = {"cnt", "crus"}
+table.insert(Usrs, "roblox"}
+
+Then, Usrs will equal {"cnt", "crus", "roblox"}
+
+Re: Fixed And New: All About Tables (Arrays)
+
+cntkillme:
+
+To remove from a table
+
+table.remove(TableName, Location)
+
+Examples:
+
+Usrs = {"cnt", "crus", "roblox"}
+table.remove(Usrs, 2)
+
+Then, Usrs will equal {"cnt", "roblox"}
+
+
+Note:
+Roblox's tables start from 1, most other languages start from 0
+
+Example:
+
+Roblox
+Usrs = {"lol", "lol2", "lol3"}
+Index of lol = 1, lol2 = 2, lol3 = 3
+
+JavaScript
+Usrs = ["lol", "lol2", "lol3"]
+Index of lol = 0, lol2 = 1, lol3 = 2
+
+PHP
+$Usrs = Array("lol", "lol2", "lol3")
+Index of lol = 0, lol2 = 1, lol3 = 2
+
+VisualStudios
+Di...
+
+Re: Fixed And New: All About Tables (Arrays)
+
+cntkillme:
+
+To view a value from a table
+
+TableName[Index]
+
+Example:
+Usrs = {"lol", "lol2", "lol3"}
+print(TableName[1])
+
+That would print "lol"
+
+
+To see if a value is contained in a table
+
+Usrs = {"lol", "lol2", "lol3"}
+
+if #Usrs == 0 then return end --Hashtag indicates the length of the table, if the table is empty then it will just stop running a function
+for i = 1, #Usrs do --Start a for loop from 1 until amount of users [3 in this case]
+if Usrs[i] == "lolz" then --Checks if the table[index] equals lolz
+...
+
+Re: Scripting A Part.
+
+cntkillme:
+
+make 100 miniboxes welded together and used an ontouched event to break joints
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+ting = 0
+
+function Touched(hit)
+if hit == nil or hit.Parent == nil then return end
+if ting == 1 then return end
+
+ting = 1
+
+local user = game.Players:GetPlayerFromCharacter(hit.Parent)
+if user == nil then return end
+user["leaderstats"]["Points"].Value = user["leaderstats"]["Points"].Value + 10
+wait(1)
+ting = 0
+
+end
+script.Parent.Touched:connect(Touched)
+
+Re: Billboardgui problem
+
+cntkillme:
+
+Hmm, have you considered trying offset? I just tried the billboard gui and using offset as size can go as big as i need it to
+
+Weird error
+
+cntkillme:
+
+Input:
+
+local Player = script.Parent.Parent["Player"]
+local Body = script.Parent.Parent["Body"]
+local MPlay = script.Parent.Parent.Parent.Parent.Parent
+
+function Clicked()
+	if #Player.Text < 1 or #Body.Text < 1 then
+		Body.Text = "Please Make Sure All Fields Are Filled"
+		return
+	end
+	if game.Players:FindFirstChild(Player.Text) == nil then
+		Body.Text = "The Player Couldn't Be Found"
+		return
+	end
+	local Messages = game.Players[Player.Text]["PlayerGui"]["PrivateMessaging"]["Messages"]
+	local Mes...
+
+Re: Weird error
+
+cntkillme:
+
+Found my errror, i added local to the message.name -.-
+
+Omg im so stupid
+
+cntkillme:
+
+As silly as this may sound:
+
+Suppose i have a truck with a brick and hingeon back of the brick..
+How would i make it so if that hinge touches another objects, the other object joins it? like connects to it?
+
+Re: Omg im so stupid
+
+cntkillme:
+
+Bump
+
+Re: Challenge for scripters!
+
+cntkillme:
+
+That's not hard lolz
+I know a super easy way
+
+Invisible weld attached to character -> Visible brick far away =D
+
+0
+| --- {}
+^
+
+Help, it should be easy but i have no clue
+
+cntkillme:
+
+Suppose i have a truck with a brick and hinge on back of the brick...
+How would i make it so if that hinge touches another objects, the other object connects to it?
+
+Re: Eh this is awkward... But can you help me?
+
+cntkillme:
+
+Rad = script.parent.parent.parent.parent.GuiStats.Rad.Value
+
+function RadDeath()
+
+if Rad.Value = 1000 then
+
+local Humanoid.Health = 0
+
+end
+
+script.Parent.MouseButton1Down:connect(RadDeath)
+
+Re: Help, it should be easy but i have no clue
+
+cntkillme:
+
+Bumper cars...
+
+Re: What is wrong with this script ?
+
+cntkillme:
+
+while wait() do
+or
+
+while true and wait() do
+
+Re: Help, it should be easy but i have no clue
+
+cntkillme:
+
+So his is what i tried
+
+On touched, brick.Parnet = hit.Parent
+hit.Parent:MakeJoints()
+
+weird -.- doesnt wanna work
+
+Re: Gasoline station(instruction)
+
+cntkillme:
+
+1) This game is updated
+2) Don't say he sucks at grammar, he's not from america
+3) At first, his On tool was 4000 lines, so don't hate on him
+4) The game is good once you know how to play
+
+Re: Why Do not Use Free Models Everytime or 1x1x1x1 Attacks You
+
+cntkillme:
+
+Roblox can ban anyone they want for reason or not, it's their game
+
+Re: How do I
+
+cntkillme:
+
+Shirt= 
+Pant = 
+
+game.Players.PlayerEntered:connect(function(Player)
+repeat wait() until Player.Character ~= nil
+if Player.Character:FindFirstChild("Shirt") then Player.Character:FindFirstChild("Shirt"):remove end
+
+if Player.Character:FindFirstChild("Pants") then Player.Character:FindFirstChild("Pants"):remove end
+
+Shirt:clone().Parent = Player.Character
+Pant:clone().Parent = Player.Character
+end)
+
+^Somethine like that
+
+Re: how come this script does not work in multiplayer
+
+cntkillme:
+
+No output?
+
+Re: TimeOfDay Script Not Working
+
+cntkillme:
+
+You can always
+
+String = "12:42:23"
+Hr = string.sub(String, 1, 2)
+Min = string.sub(String, 3, 4)
+Sec = string.sub(String, 5, 6)
+
+i think
+
+he can always do
+
+while true and wait() do
+..GetMinutesAfterMidnight + 1?
+end
+
+Re: Giver with tool in lighting
+
+cntkillme:
+
+errm, before return end, maybe making debounce back to false?
+
+Re: TimeOfDay Script Not Working
+
+cntkillme:
+
+
+while true and wait() do
+..GetMinutesAfterMidnight + 1?
+end
+
+
+
+
+
+Re: m.Text function onClicked() not working.
+
+cntkillme:
+
+This if finale:
+
+function onClick()
+m = Instance.new("Message", Workspace)
+m.Text = "m.Text onClick function works"
+wait(3)
+m:Destroy()
+end
+
+script.Parent.ClickDetector.MouseClick:connect(onClick)
+
+
+Weird error
+
+cntkillme:
+
+repeat wait() until script.Parent.Parent.Parent.Parent:FindFirstChild("Messages") ~= nil
+Messages = script.Parent.Parent.Parent.Parent["Messages"]
+
+function GetUser(Object)
+	if Object == nil then return "Error" end
+	if #Object.Value < 1 then return "Error2" end
+	local Breaker = 0
+
+	for i = 1, #Object.Value do
+		if string.sub(Object.Value, i, i + 1) == "$#" then
+			Breaker = i
+		end
+	end
+	if Breaker < 1 then return "Error3" end
+	return string.sub(Object.Value, Breaker + 2)
+end
+
+function DoView(Ms...
+
+Re: Weird error
+
+cntkillme:
+
+bump
+
+Re: Weird error
+
+cntkillme:
+
+Apparently i need a wait() -.-
+
+New Tycoon [By CntKillMe]
+
+cntkillme:
+
+INTRODUCTION
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Welcome, you may or may not have read the old thread from my alt account,
+crusada91, about the features, but I am updating it.
+
+The tycoon itself isn't done but since I can't think of what to add, I've added a whole bunch of features and commands
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+ABOUT
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+There are only few fre...
+
+New Tycoon [Made By Cntkillme]
+
+cntkillme:
+
+My New Tycoon [Prev. Seen]
+Questions/Ideas, PM Me
+
+
+ABOUT
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+There are only few free models such as:
+-Weapons [Custom GUI and New Clip System]
+-Food [Edited To Remove After Some Bites (And Heal You)]
+-Sounds
+
+All the hopperbins [Non-Handled Toools] were created by me such as:
+-Jail Ticket, Jail Door, Clip, etc
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+FEATURES
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-...
+
+First ever steering wheel on roblox
+
+cntkillme:
+
+So here's the thing
+I've been thinking about making a car controlled by the steering wheel.
+
+Right now, the steering wheel is done, but I'm not sure if any glitch will happen if more than me alone plays.
+There are 4 in-game Test steering wheels i want to be tested, hopefully 4 all at the same time.
+
+Information:
+-Rotates 900 Degrees [Car Like]
+-Auto Centering [When Let Go'd Of A/D]
+-The script is in StarterPack, for Player:GetMouse()
+
+Testers will be appreciated, party me for the details
+
+First ever steering wheel on roblox
+
+cntkillme:
+
+So here's the thing
+I've been thinking about making a car controlled by the steering wheel.
+
+Right now, the steering wheel is done, but I'm not sure if any glitch will happen if more than me alone plays.
+There are 4 in-game Test steering wheels i want to be tested, hopefully 4 all at the same time.
+
+Information:
+-Rotates 900 Degrees [Car Like]
+-Auto Centering [When Let Go'd Of A/D]
+-The script is in StarterPack, for Player:GetMouse()
+
+Testers will be appreciated, party me for the details!
+
+Re: First ever steering wheel on roblox
+
+cntkillme:
+
+It's not possible to turn the car with moving the wheels unless he does that for design and cframe's the car
+Look at mines tho
+
+Seat ChildRemoved
+
+cntkillme:
+
+So i made a conenction with seat child removed, everything works 100% right?
+But you see, if you quickly get off the seat after you sit on it, it doesn't do the removed function, how would i fix this.
+
+I tried:
+Anchoring their head after the get up
+
+But it will only anchor their head after they get up normally
+
+Re: Seat ChildRemoved
+
+cntkillme:
+
+K, it is:
+
+function Exit()
+	Player.Character["Head"].Anchored = true
+	DownKey = nil
+	Con:disconnect()
+	Con2:disconnect()
+	Cons:disconnect()
+	wait()
+	Mouse = nil
+	RetrievePos()
+	repeat wait() until Pos == 125
+	Dis1 = false
+	Dis2 = false
+	seat = nil
+	ting = 0
+	RemoveTheRest()
+	Player.Character["Head"].Anchored = false
+	setWork(game.Workspace)
+end
+
+So it all works when you don't quickly get outa your seat
+[LocalScript in StarterPack]
+
+Re: Seat ChildRemoved
+
+cntkillme:
+
+bump
+
+Re: Seat ChildRemoved
+
+cntkillme:
+
+...
+
+Re: Seat ChildRemoved
+
+cntkillme:
+
+Common, is this not an easy fix?
+
+Variable is a connection help?
+
+cntkillme:
+
+How would you check if a variable is a connection
+
+Can it be
+
+local A = script.Parent.Touched:connect(Touched)
+
+if A.IsConnection or something like that??
+
+Re: Returns loweracase letters without string.lower()?
+
+cntkillme:
+
+Look at line 1, do you see VARIABLE = string.lower(msg)??
+
+Re: Help?
+
+cntkillme:
+
+When you use '=', You are setting
+When you use '==' You are comparing
+
+PHP:
+When you use '===' You are checking if they are identicle
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+I said above, like a connecter [script.Parent.Touched] [Tool.Button1Down] etc
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+Suppose i connected it, like so:
+
+local Con = game.Workspace.Part.ClickDetector.MouseClick:connect(Function)
+
+Can i check if it's connected?
+
+Liek something like this?
+
+if Con:IsConnected() or something, idk? Is it possible
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+Testing =D
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+Well, the .connection works but it doesn't fix my problem
+
+Re: Edit This Script To Make It Work.
+
+cntkillme:
+
+Under the make function, add Tool:Destroy() or script.Parent.Parent:Destroy() or whwatebetr
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+Do you have team viewer?
+
+Re: Variable is a connection help?
+
+cntkillme:
+
+No, but you can buy it if you want, otherwise, there is no trial and it's 100% free
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+Magnitude isn't glitchy if used properly ;]
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+Since when is it glitchy?
+
+Re: Slowing a game down
+
+cntkillme:
+
+while true and wait() do
+Instance.new("Weld", Workspace)
+wait()
+end
+
+Re: Slowing a game down
+
+cntkillme:
+
+print(wait() * 2)
+
+Re: Math question
+
+cntkillme:
+
+No, return:
+
+function GetNumber(x, y)
+print(x + y)
+end
+
+function GetNumber2(x,y)
+return x + y
+end
+
+GetNumber(1,1) --nil
+(GetNumber2(1,1)) --2
+
+Re: Slowing a game down
+
+cntkillme:
+
+That does wait() * 2? I don't understand what you're asking
+
+What are wrong with seats!
+
+cntkillme:
+
+When you eject from a seat right when you get on, the childremove event glitches
+
+Re: Script to solve Algebra equations
+
+cntkillme:
+
+I think you can do this
+
+function SolveAddInner(add1, equal)
+return equal-add1
+end
+
+If you have a Q:
+9 + x = 10
+
+you do
+
+SolveAddInner(9, 10)
+Will return 1 =D
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+How can i do that with a normal seat?
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+Loop hole??
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+Lol.
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+If you click space, the Child still gets removed.
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+Test my steering wheel at my tycoon building (38%)
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+I was thinking of that as last-resort
+
+Re: How can I see how many bricks I have in my place?
+
+cntkillme:
+
+WONG!
+
+result = 0
+
+function Check(loc)
+for i,v in pairs (loc:GetChildren()) do
+if v:IsA("Part") then
+result = result + 1
+elseif v:IsA("Model") then
+Check(v)
+end
+end
+
+Re: Invisible Brick!
+
+cntkillme:
+
+errm, you can do this:
+
+Workspace
+..ModelPro
+....Brick
+......Script
+
+..ModelPro
+....Brick
+......Script
+
+..ModelPro
+....Brick
+......Script
+
+script.Parent.Transparency = 1
+
+Re: How to make a video intro on entrance.
+
+cntkillme:
+
+Video or Cutscene? Like scrolling cammera or a youtube video?
+
+Re: How can I see how many bricks I have in my place?
+
+cntkillme:
+
+You don't get my script
+It checks for all parts including parts in models -.-
+
+Re: Broken code (du'h)
+
+cntkillme:
+
+^What he said^
+
+Re: How can I see how many bricks I have in my place?
+
+cntkillme:
+
+No, i fail at typing with lights off, i can't really see
+
+Re: Cannon Ball Script
+
+cntkillme:
+
+That won't work
+Ball.Colour = Color3.new("Black")
+
+TO
+Ball.BrickColor = BrickColor.new("Black")
+
+Re: Cannon Ball Script
+
+cntkillme:
+
+Or nvm
+
+Re: Invisible Brick!
+
+cntkillme:
+
+:Destroy() == :destroy()
+:Clone() == :clone()
+
+LOl ~= Lol
+
+
+Re: Text Color Changing Script
+
+cntkillme:
+
+Player = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent
+
+Text = script.Parent.Text
+
+if Player.leaderstats.Cash.Value =< 50 then 
+script.Parent.TextColor3 = Color3.new(0/255,255/255,0/255)
+else
+script.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
+end
+end
+
+Re: How can I see how many bricks I have in my place?
+
+cntkillme:
+
+k.
+
+Re: Invisible Brick!
+
+cntkillme:
+
+Yea ik, you can't "Script.Parent," as you recently said
+
+Re: Gui click help
+
+cntkillme:
+
+I don't get what you're trying to do :(
+
+Re: Script to solve Algebra equations
+
+cntkillme:
+
+Hmm
+Let's see, it's possible, but hard to script
+
+
+Re: Gui click help
+
+cntkillme:
+
+Sleep?
+
+Re: Invisible Brick!
+
+cntkillme:
+
+k.
+
+Re: Help?
+
+cntkillme:
+
+No, u use color3 if its gui
+
+m.BackgroundColor3 = Color3.new(r/255, g/255, b/255)
+
+Re: tool weld script only works in play solo/start server
+
+cntkillme:
+
+llo
+
+Re: on touch damage
+
+cntkillme:
+
+Eww, it's takedamage
+
+Re: sum scripts
+
+cntkillme:
+
+;]
+
+Re: Locking Camera?
+
+cntkillme:
+
+You can't put it in workspace
+
+Dude, where's my car
+
+cntkillme:
+
+OMGzNoWAI!
+YouHASHcar?
+O_O Wherez
+WithWho?
+Don't you talk when i'm talking, you better mute it
+
+SoYoulookinAtThisThreadRightNao
+MeNeedSomeTesters
+@TestMySteeringWheel @ TycooonBuilding (38%) @ Myprofile @ Roblox @ Internet @ Technology @ Continents @ Earth @ Sattalites @ Sun
+
+Re: Help?
+
+cntkillme:
+
+I ish always right! CuzMeSoFly
+
+Re: Locking Camera?
+
+cntkillme:
+
+Step 3 You must have localscript to edit camera
+Step 4 Re Drag It and put it under startergear
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+Ting=0
+
+function Noob(Where)
+If Where == nil or Where.Parent == nil then return end
+If Ting == 1 then return end
+Ting = 1
+There = Where.Parent:FindFirstChild("Humanoid")
+NoWai = game.Players:GetPlayerFromCharacter(Where.Parent)
+if There == nil or NoWai == nil then Ting = 0 return end
+Yeabro = Where.Parent["Torso"]
+Yeabro.CFrame = CFrame.new(x,y,z)
+wait()
+Ting = 0
+end
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+script.Parent.Touched:connect(function(hit) Noob(hit) end)
+
+Re: Dude, where's my car
+
+cntkillme:
+
+Yesh, did you tester it? or u going to party me
+
+Re: Locking Camera?
+
+cntkillme:
+
+DidYouKnowYouDon'tNeedCloning!!!
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+NoProblem =D
+
+Re: Dude, where's my car
+
+cntkillme:
+
+Ohhh, 1 character comment...
+
+Re: Dude, where's my car
+
+cntkillme:
+
+So you are, astonished, to be here with me ;]
+Everybody is
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+x = X Positon
+y = Y Position
+z = Z Position
+
+(10, 23, 10) Or whatever you want
+
+Re: Locking Camera?
+
+cntkillme:
+
+Never! Unless you is be using a weird compuper
+
+Re: change color script
+
+cntkillme:
+
+Brickcolor
+
+Re: Local script Help
+
+cntkillme:
+
+YouCan!
+
+game.Workspace["Noob"]["Humanoid"].WalkSpeed = 9001
+
+Re: Dude, where's my car
+
+cntkillme:
+
+Just to test it O_o You has problem? I<3You
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+Change the CFrame location, or: OutputPlz
+
+Re: what does this output mean?
+
+cntkillme:
+
+zee
+
+Re: How?
+
+cntkillme:
+
+Outputs instead plox
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+It works bretheren, @YouBeMad? | I use this, except with rather "rational" terms
+
+Re: Learning LUA (My notes)
+
+cntkillme:
+
+for i=1, 255 do
+print ""
+end
+
+Re: Locking Camera?
+
+cntkillme:
+
+Isn't that what he wants? Make it like this:
+
+
+game.Workspace.ChildAdded:connect(function(child)
+wait()
+if child == nil or child.Parent == nil then return end
+if game.Players:GetPlayerFromCharacter(child) == nil then return end
+--ThenCamera
+end)
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+Weird, i never capitalized them
+
+Re: morph when player enters
+
+cntkillme:
+
+do player added then morph
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+It's called variables, never heard of thems?
+
+Re: Locking Camera?
+
+cntkillme:
+
+It takes more scripting, so idk what you mean
+
+~Clone [5-20 lines]
+~~Script
+
+~StarterGear
+~~Script
+
+Re: Quick question
+
+cntkillme:
+
+uhh?
+
+script.Parent.Touched:connect(function(hit)
+--ScriptHere
+end)
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+ThereYouGoes, tatIsmoreLikeit
+
+Var = 123
+print(Var)
+Var = game.Workspace
+print(#Var:GetChildren())
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+RULE: Y= x + 3
+
+x=3
+
+Y=?
+
+function ErrmTest(N1, N2)
+return N1 + N2
+end
+
+ErrmTest(3, 3) --6!
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+Make sure its in a brick and its not a local script.......
+
+Re: Quick question
+
+cntkillme:
+
+Enjoiz
+
+Re: Locking Camera?
+
+cntkillme:
+
+NoProbz
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+lol
+
+Do you want me to solve that O_o
+
+If so
+
+5+3
+6+3
+7+3
+
+8
+9
+10
+
+Re: Locking Camera?
+
+cntkillme:
+
+No you're not lolz
+And goodnight
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+OfCource
+I also know more! learn more by clicking alt f4!!!
+
+Re: How?
+
+cntkillme:
+
+View -> Output | RePlay
+Shwos most errors
+
+Re: Locking Camera?
+
+cntkillme:
+
+So, about this "grammar" can you type in 0 light?
+Roblox 2.0 looks better.
+
+I believe it's, "Enough said"
+
+Re: How?
+
+cntkillme:
+
+So View-Output
+Play | View-Output
+Close and REplay
+tell me what it says
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+lol, click WINDOWS LOGO + L
+
+Re: Seranok
+
+cntkillme:
+
+Hi
+
+Re: is ther one?
+
+cntkillme:
+
+Gigantic BUMP
+
+Re: I can't get the teleport script to work, please help.
+
+cntkillme:
+
+I don't, I have Windows 7
+
+Re: is ther one?
+
+cntkillme:
+
+This was the second post of all of roblox, btw
+
+Re: How?
+
+cntkillme:
+
+on line 3
+the model is not existant, put line 3 up
+
+Re: Grabing players
+
+cntkillme:
+
+local c = game.Players:GetChildren()
+for i = 1, #c do
+c[i].Character.Humanoid.Health = 0
+end
+
+
+Re: Grabing players
+
+cntkillme:
+
+np
+
+Case Closed | byez
+
+cntkillme:
+
+K, since i had every single last reply on posts for the past 10 min, me go byebye
+
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+:_(
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+Lol 
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+When you quickly get out of a seat, the removed function doesn't work, how would i fix this?
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+No plan other than 1
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Java is for losers ;] jp
+
+Re: What are wrong with seats!
+
+cntkillme:
+
+Let me say my problem more clearly:
+
+I have a localscript in startergear
+It gets all the seats in the game and adds them to a table
+Makes a connection for each one and inserts that into a table
+And everything works normally, BUT:
+If you QUICKLY get out of the seat, the CONNECTIONS wont DISCONNECT and the Removed function itself wont finish.
+
+Re: Returns loweracase letters without string.lower()?
+
+cntkillme:
+
+lolz, CTRL + F: string.lower
+
+Re: Scripting help? Probably syntax
+
+cntkillme:
+
+Is that seriously how you script.
+
+Re: Camera Manipulation(Works in Solo but not Play?)
+
+cntkillme:
+
+^^Lol
+
+Re: How do I fix this script?
+
+cntkillme:
+
+Life is to Death AS
+___ is to Pro
+
+Re: Group Hide-Name Script.
+
+cntkillme:
+
+noes
+
+Re: Scripting help? Probably syntax
+
+cntkillme:
+
+YOU FAIL, on like i think 5-8, you forgot end parenthese ;]
+
+Re: Group Hide-Name Script.
+
+cntkillme:
+
+Me forget, you can always do:
+game.Workspace.PlayerName.Name = ""
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+But I am "big and strong"
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+Blinks, yea, jumps around, not for me?
+
+Re: findFirstChild
+
+cntkillme:
+
+A shortcut, after something is true, you don't need to add findfirstchild
+
+Example:
+
+if Workspace:FindFirstChild("Model 123") ~= nil then
+Model = Workspace["Model 123"]
+Model:Destroy()
+end
+
+Re: tool weld script only works in play solo/start server
+
+cntkillme:
+
+Try as a local script
+
+Re: Random Model Position (Limited)
+
+cntkillme:
+
+zomb2:MoveTo
+(script.Parent.Position.X + math.random(1, 10), script.Parent.Position.Y, script.Parent.Position.Z + math.random(1, 10))
+
+
+Re: Spike
+
+cntkillme:
+
+ehh
+
+function Touched(hit)
+hit.Parent:FindFirstChild("Humanoid").Health = 0
+end
+
+--CONnector here
+
+Re: Random Model Position (Limited)
+
+cntkillme:
+
+Cus, syntax:
+
+Model:MoveTo(x, y, z)
+
+Not
+
+Model:MoveTo = Vector3.new(x, y, z)
+
+Re: Is this possible?
+
+cntkillme:
+
+InsertService? Asset? is that what u mean
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Errm, opinions  fact, what are you fighting aboout, anyways?
+
+Re: How does this work?
+
+cntkillme:
+
+script.Parent.Parent.Visible = false
+script.Parent.Parent.Parent.GUI2.Visible = true
+
+Re: Seranok
+
+cntkillme:
+
+OrCantYouDoThis
+
+for i = 1, 999999 do
+if "http://www.roblox.com/asset/?id=" .. i ~= nil then
+--AddIntoTable
+end
+end
+
+Re: Returns loweracase letters without string.lower()?
+
+cntkillme:
+
+Replace
+
+string.len(msg))
+
+with
+
+nothing
+
+====ThisIsWhatisShouldBE
+string.sub(msg, 3)
+
+Re: Seranok
+
+cntkillme:
+
+ikr, but still he does something like that i'm sure, i doubt there is a service to check if the catalog is updated
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Why are you all talking about java?
+That is not the best language... I say php and batch are funnest to script
+
+Re: Spike
+
+cntkillme:
+
+^^ His works a bit better
+
+Re: will this work..
+
+cntkillme:
+
+test it
+maybe
+if player == nil then return end
+to make sure the model added is a player
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Lol? Different regions = different dialets = different word choice
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+EasyPHP, what's that?
+
+If it's like a text editor then i suggest Notepad++
+
+Probably Navicat for MySQL and WampServer << It works for me ;]
+
+Re: will this work..
+
+cntkillme:
+
+It's probably some error, idk how to use gamepass
+
+Re: How does this work?
+
+cntkillme:
+
+Just make a gui and use CLONE()
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Ooo, that's cool, weird how i never heard of it. Oh well, to late since i have everything anyways
+
+Re: change color script
+
+cntkillme:
+
+Inside the tool, do
+
+function Clicked(mouse)
+if mouse.Target == nil then return end
+if not mouse.Target:IsA("Part") then return end
+mouse.Target.BrickColor = BrickColor.new("COLORHERE")
+end
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+This reminds me of an 9 page fight there was with me and some other guy
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+l[i] when you using a as loop?
+l[a] is what you need
+plus, is textbutton3 defined?
+
+Re: Seranok
+
+cntkillme:
+
+OfCource ;] System.IO.Reader or something like that?? Or is that vb < idk
+
+Re: Seranok
+
+cntkillme:
+
+You can't put java or xml or anything in lua, if that's what you want to know
+
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+textbutton3 won't work unless it's a variable.
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+Me want to be a wiki writter :(
+
+Re: How to find an entire team and do something
+
+cntkillme:
+
+:_(
+I think i'm in the group, i just dont know how to get promoted :(
+
+Re: Can you guys give me an example of:
+
+cntkillme:
+
+lOL HOW DARE YOU FORGET THE ENDS!
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+O_o
+Isn't there an option to do that, o waitnvm
+
+Re: Map changer-Fix?
+
+cntkillme:
+
+You can't name a model 1 can you. anyway
+
+local map = chatmsg:sub(5, chatmsg:len())
+may work better as
+local map = string.sub(chatmsg, 5)
+
+Re: Can you guys give me an example of:
+
+cntkillme:
+
+lolz wut
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+LOLZ ^^
+
+Re: Regen Script
+
+cntkillme:
+
+no output?
+
+Re: Camera Focus
+
+cntkillme:
+
+There is no {'s
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+If it doesn't work, I'm not sure whether it's MouseButton1Down or Button1Down, idk why i get confuzzled
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+NEVER
+
+PI > ALL
+
+Take a circle
+How many diameters does it take to make the circle?
+3.141592654 [Google for millions of digits =D]
+
+Re: Help: Roblox Studio 2.0
+
+cntkillme:
+
+kz
+~~@@~~
+
+Re: Hey, Help? 
+
+cntkillme:
+
+idk, play animation then do the script?
+I has 0 clue what ur askin
+
+Re: Chat system? Possible?
+
+cntkillme:
+
+That's how you find pi lolz
+I think
+
+Re: Leaderboard script
+
+cntkillme:
+
+You need to add a script to the plane
+Or the gun of the plane or whatever
+
+Re: herpderp
+
+cntkillme:
+
+Derpina
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+No, is there an output?
+
+---
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+I think it's:
+
+Color3.new(r/255, g/255, b/255)
+
+not
+
+Color3.new(r,g,b)
+
+Re: Can you guys give me an example of:
+
+cntkillme:
+
+' OR '1' == '1
+
+O_O
+
+Re: Map changer-Fix?
+
+cntkillme:
+
+eww no, but change the name from 1 to Map1
+and check ur syntaxes
+
+Re: Map changer-Fix?
+
+cntkillme:
+
+current_map
+not defined?
+any output?
+
+Re: Cannon Ball Script
+
+cntkillme:
+
+Ball.Position = game.Workspace.Cannon_Red1.Position + (0, 0, 2)
+
+Is that the problem? i think + Vector3.new(0,0,2)
+
+Re: Random Model Position (Limited)
+
+cntkillme:
+
+Lolz
+
+Re: ADMIN SCRIPT
+
+cntkillme:
+
+Person299 or myne [NO FOR YU, ME WORK HARD TO MAKE HER!]
+
+
+Re: Help Please!
+
+cntkillme:
+
+Errm, i think i know what he needs help with ;]
+He doesn't quite know when to use a comaa
+
+Re: is ther one?
+
+cntkillme:
+
+O_o
+BUMPSTICLES!
+
+Re: Camera Focus
+
+cntkillme:
+
+It's not there.. I'm sorry but your eyes are failing you,
+
+Re: Camera Focus
+
+cntkillme:
+
+O lol, i thought u was talking about the main script, what orig poister posted
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+no output??
+
+..--;;--..
+
+Off Topic Script Help: JavaScript
+
+cntkillme:
+
+Input:
+
+var Pics = ["Img1.bmp", "Img2.bmp";
+var Img = document.getElementById("ImgSS");
+var Hash = 0;
+var E = false;
+
+function Slsh() {
+if(E == false) { return; }
+Img.src = Pics[Hash];
+Hash++;
+setTimeout("Slsh()", 2000);
+}
+
+function Click() {
+E = !E;
+Slsh();
+}
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+Still broken but i added this:
+
+if(Hash >= Pics.length) { Hash = 0; }
+UNDER
+Img.src = Pics[Hash];
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+So it works i'm guessing?
+lool
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+I know it's wrong because arrays in javascript aren't defined with { and }
+It's worth a try though
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+@rayoma
+
+Tyvm =D I didn't see that, LOLFAIL
+It works now ;]
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+script.Parent.MouseButton1Down:connect(function()
+game.Lighting:ClearAllChildren()
+end)
+
+^^THAT?
+
+Re: Hey, Help? 
+
+cntkillme:
+
+lol
+
+Re: Hey, Help? 
+
+cntkillme:
+
+lol
+
+Re: Hey, Help? 
+
+cntkillme:
+
+lol
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+@Agent, that made things complicated after i fixed it, read the 2nd line, i added the thing i missed =D Nice try, i'm sure that script would work
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+Why do you need to go there for it O_o
+
+Re: Am i doing something wrong here...?
+
+cntkillme:
+
+WEird, it should wotk 100%, make sure it's a normal script i think?
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+What language is your poker game in?
+
+Re: Water flood
+
+cntkillme:
+
+Use Size = Vector3.new(1000,1000,1000)
+CFrame = CFrame.new(0,0,0)
+
+Re: Off Topic Script Help: JavaScript
+
+cntkillme:
+
+We do
+
+Re: Camera Manipulation(Works in Solo but not Play?)
+
+cntkillme:
+
+camera.CoordinateFrame = game.Workspace.CPart1.CFrame
+camera.Focus = game.Workspace.FPart1.CFrame
+
+Is it cuz one is CPart1 and one is FPart1??
+
+Re: How can I make a "Home Owner" door
+
+cntkillme:
+
+You have a lot to script for that.
+
+Survival 404 [New]
+
+cntkillme:
+
+Introduction
+=======================================================
+A new survival 404 place can be found [Orig. from Davidii] with many updates
+
+You can see the game here:
+http://www.roblox.com/Survival404-place?id=76504780
+=======================================================
+
+Fixes
+=======================================================
+Re-Tool Works
+Remove T-Shirt on Entrance
+=======================================================
+
+Updates
+=================================================...
+
+Survival 404 ~ CntKillMe
+
+cntkillme:
+
+Introduction
+=======================================================
+A new survival 404 place can be found [Orig. from Davidii] with many updates
+
+You can see the game here:
+http://www.roblox.com/Survival404-place?id=76504780
+=======================================================
+
+Fixes
+=======================================================
+Re-Tool Works
+Remove T-Shirt on Entrance
+=======================================================
+
+Updates
+=================================================...
+
+No delete method is working
+
+cntkillme:
+
+Part of script:
+
+for a, b in pairs(Items) do
+if b ~= nil then
+b:Destroy()
+Count = Count + 1
+end
+end
+
+Adds to items:
+
+function Insert(Part)
+...
+table.insert(Items, Part)
+end
+
+The script works 100% except the part won't remove
+
+I've tried, remove(), destroy(), ,Parent = nil
+NOthing works
+I also tried to remove the if b ~= nil, same thing happens
+
+Re: What is wrong with this admin commands script i made?
+
+cntkillme:
+
+local player = game.Players:FindFirstChild(string(msg,6))
+
+or 
+
+local player = game.Players:FindFirstChild(string.sub(msg,6))
+
+Re: No delete method is working
+
+cntkillme:
+
+bump
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+I think number 9 was easy, isn't it just html, css, andthings like that?
+
+Re: No delete method is working
+
+cntkillme:
+
+i tried that. nothing changed, as i mentioned above
+
+Re: Button Function
+
+cntkillme:
+
+There is another way:
+
+if key == [SOME ROBLOX CODE FOR SHIFT, YOU CAN FIND IT ON GOOGLE!] then
+
+Re: What is wrong with this admin commands script i made?
+
+cntkillme:
+
+You're missing a return false
+
+function isPlayerAdmin(name)
+ for i,v in pairs (admins) do
+ if name == v then
+ return true
+ end 
+ end
+return false
+end
+
+Re: No delete method is working
+
+cntkillme:
+
+It does, here is the code:
+
+
+local Items = {}
+
+local Ting0 = 0
+function InsertItem(Part)
+	if Part == nil or Part.Parent == nil then return end
+	if Ting0 == 1 then return end
+	Ting0 = 1
+	if not InRange(Part) then Ting0 = 0 return end
+	if HasItem(Part) then Err.Text = "Item Is Already Inserted" Ting0 = 0 return end
+	if not CanUse(Part) then Ting0 = 0 return end
+	table.insert(Items, Part)
+	Err.Text = "Inserted Item Successfully"
+	if #Items <= 1 then
+		Itt.Text = Itt.Text .. Part["Type"].Value
+	else...
+
+Re: What is wrong with this admin commands script i made?
+
+cntkillme:
+
+1 mroe thing -.-
+You added an extra END for the chatted function
+
+Re: No delete method is working
+
+cntkillme:
+
+Lol 
+it all works, hmm, is it because it's a local script nothing will delete??
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+@BlackBoy
+
+html is the code for all the design in a webpage
+
+Re: No delete method is working
+
+cntkillme:
+
+I got it working ;]
+I accedently added a clearlist() in a random spot =D ILOVEYOUPLPS
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+So why you no me?
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+YOU BETTER BE, jk, me is sorry, me love you long time
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+=D
+Me no lonewy noo mowe
+
+Help needed please, don't know much of the problem
+
+cntkillme:
+
+I have this craft tool sort of things, right?
+Anyways, when I get the materials I need, the buttons to get the item/tool shows up on right. So when i click that, the item doesn't get cloned because it says it's null when it's definitly not
+
+InGuiButton
+
+local BNewItem = GetCItem(v)
+local BNewTool = GetCTool(v)
+wait()
+if BNewItem ~= nil then
+Err.Text = "Item Created"
+BNewItem:Clone().Parent = game.Players.LocalPlayer["Items"]
+end
+if BNewTool ~= nil then
+Err.Text = "Tool Created"
+BNewTool:Clone()....
+
+Re: Help needed please, don't know much of the problem
+
+cntkillme:
+
+Forgot to add:
+
+local ToolsLoc = game.Lighting["Tools"]
+local ItemsLoc = game.Lighting["Items"]
+
+
+Re: Help needed please, don't know much of the problem
+
+cntkillme:
+
+NVM, i forgot to add a " in another lnie.
+
+Re: Top mistake I do when scripting...
+
+cntkillme:
+
+can't you do this:
+
+local Lol = 0
+
+while true do
+Lol = Lol + 1
+if Lol >= 50 then
+break
+end
+end
+
+Re: TimeOfDay, using inequalities,
+
+cntkillme:
+
+You guys all are wrong.. You can't use inequalities with strings.
+
+you would have to do:
+
+Time = tonumber(string.sub(game.Lighting.TimeOfDay, 1, 2))
+
+and do 
+
+if Time > X and Time < X then
+end
+
+Re: Top mistake I do when scripting...
+
+cntkillme:
+
+ohh lol, i though u were saying the event.
+
+the Brick.Touched
+
+Re: Pleas Help!
+
+cntkillme:
+
+if game.Workspace:FindFirstChil("Gen") then game.Workspace.Gen:Destroy()
+
+spelled Child wrong
+
+Re: Pleas Help!
+
+cntkillme:
+
+You would have to check if it exists in workspace or wherever u put it
+
+Re: Pleas Help!
+
+cntkillme:
+
+ERROR:
+if game.Workspace:FindFirstChil("Gen") then game.Workspace.Gen:Destroy()
+if game.Workspace:FindFirstChild("GenBricks") then game.Workspace.GenBricks:Destroy()
+
+you need ends after them so lol
+
+Re: Pleas Help!
+
+cntkillme:
+
+no prob
+
+Re: i just dont get custom functions
+
+cntkillme:
+
+function [Name](arg1, arg2, etc)
+end
+
+Event:connect([Name])
+
+Re: Cloneing Models from lighting
+
+cntkillme:
+
+Yea
+
+Model:MoveTo(Vector)
+
+Re: i just dont get custom functions
+
+cntkillme:
+
+IK
+
+Re: Making this save/load script automatic?
+
+cntkillme:
+
+Use a playerneted
+
+Re: I'm looking for an EXPERT scripter.
+
+cntkillme:
+
+IF YOU THINK YOU CAN SCRIPT, DO THIS:
+
+Make a wave on an ocean that raises everything/lowers everything ON IT [not in model]
+As in:
+
+_________{ [ ] }____ (Boat on ocean)
+
+And a wave that SLOWELY goes through, realisicly, brings the boat up and down depending on the RANDOM wave
+
+I hate math, how would i do this
+
+cntkillme:
+
+Amnt = tostring(Part[Type]["Health"].Value):len()
+Bar.Size = UDim2.new(Part[Type]["Health"].Value / (Amnt * 10), 0, 1, 0)
+
+Bsaiclly, an object has a health int value in another value, blah blah
+I want the gui to show the amount of health left, but my way won't work well, makes it half way and stuff...
+
+So what math would i do.
+
+Heath.Value = 17
+
+Var.Size = UDim2.new(HEALTHVALUE, 0, 1, 0)
+
+Re: Whats wrong with this script?
+
+cntkillme:
+
+do local a = Instance...
+and a.Text = ...
+
+Re: Whats wrong with this script?
+
+cntkillme:
+
+Also, do you hav a event
+
+script.Parent.Touched blah blah?
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+It's not max health, it can range from 1 - 100000000000
+It's not "health" but "health" for the tree stump
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+Would this work?
+
+
+	if Part[Type]["Health"].Value % 10 then
+		Amnt = tostring(Part[Type]["Health"].Value):len() - 1
+	else
+		Amnt = tostring(Part[Type]["Health"].Value):len()
+	end
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+nope. -.-
+
+Re: Will this work?
+
+cntkillme:
+
+Friends = {"someone", "someone"}
+
+game.Players.PlayerAdded:connect(function(player)
+ table.insert(Friends, player.Name)
+end)
+
+
+
+Re: Whats wrong with this script?
+
+cntkillme:
+
+
+script.Parent.Touched:connect(OnTouch)
+
+Re: A script that makes you move and talk after you are banned.
+
+cntkillme:
+
+He meant:
+
+Make clone of kicked user
+Make that clone do random? actions
+
+Re: What is the script's problem?
+
+cntkillme:
+
+local kills= "KOs"
+^%
+
+Re: I'm trying to test out my ROBLOX game anti-virus software.
+
+cntkillme:
+
+uhh, viruses these days probably wont use INFECTED anymore
+
+Re: Please Help
+
+cntkillme:
+
+if game.Workspace:FindFirstChil("Gen") then game.Workspace.Gen:Destroy()
+end
+if game.Workspace:FindFirstChild("GenBricks") then game.Workspace.GenBricks:Destroy()
+end
+
+Re: Kill limitations
+
+cntkillme:
+
+It's possible, its gonna be a longish script though
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+help please ;(
+
+Re: ROBLOX Wiki writer applications
+
+cntkillme:
+
+HELP:
+http://www.roblox.com/Forum/ShowPost.aspx?PostID=80148765
+
+and msg me if you think you got it ;]
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+It's not MAXIMUM 100
+It can be ANYTHING
+
+Re: Kill limitations
+
+cntkillme:
+
+Use like a while true and some tables
+
+Re: I hate math, how would i do this
+
+cntkillme:
+
+oHh, but there is no maximum/minimum for health.value.
+
+local Amnt = 0
+function TakeDamage(Part)
+	if Part == nil or Part.Parent == nil then return end
+	local Player, Char = GetInfo()
+	Part[Type]["Health"].Value = Part[Type]["Health"].Value - Damage
+	if Part[Type]["Health"].Value <= 0 then
+		Part[Type]:Destroy()
+		Part.Parent = Player["Items"]
+		Bar.Size = UDim2.new(0, 0, 1, 0)
+		Amnt = 0
+		return
+	end
+	Bar.Size = UDim2.new(? ,0, 1, 0)
+end
+
+for bar.size, idk how i would make an equaltion.
+
+
+Re: Kill limitations
+
+cntkillme:
+
+local Banned = {}
+
+function BanPlayer(PlayerName)
+if game.Players:FindFirstChild(PlayerName) ~= nil then
+table.insert(Banned, PlayerName)
+game.Players:FindFirstChild(PlayerName):Destroy()
+end
+end
+game.Players.ChildAdded:connect(function(Player)
+for i,v in pairs(Banned) do
+if v == Player.Name then
+Player:Destroy()
+end
+end
+end)
+
+Re: How to make this ID play.
+
+cntkillme:
+
+Do you want eveyrone to hear it or just you
+
+Option 1)
+Put sound in Lighting
+Sound:Play()
+
+Opeion 2)
+Put sound in Player
+Sound:PLAYe
+
+Re: Kill limitations
+
+cntkillme:
+
+OnEntered,Add: Deaths (IntValue) toPlayer
+
+OnDied:
+Deaths.Value=Deaths.Value+1
+
+--Loop [ScriptitWOrkspace]
+While true and wait() do
+for i,v in pairs(game.Players:GetChildren()) do
+if v:FindFirstChild("Deaths") ~= nil then
+if v["Deaths"].Value > 0 then
+v:Destroy()
+end
+end
+end
+end
+
+Re: Clearing an ObjectValue
+
+cntkillme:
+
+Object.Value:Detroy() --Remove Item Itself
+Object.Value.Parnet = nil --Remove Item Itself
+
+Object.Value = nil --Clear Value
+
+Re: Fix please
+
+cntkillme:
+
+You need to call the function if it's not, like add a while loop or somehting
+
+Re: Fix please
+
+cntkillme:
+
+like
+
+
+while true and wait()
+--script
+end
+
+or something like that
+
+Re: Fix please
+
+cntkillme:
+
+FIX
+
+for i= 1, #p do 
+p[i].TeamColor =BrickColor.new("Bright red")
+end
+
+
+Roblox Encryption Error
+
+cntkillme:
+
+I'm making an encryption to prevent of viewing code from Visual Basics, but a problem::
+
+Decrpytion part [suggesting it's 7 char]
+
+for a = 1, #Val do
+if string.sub(Val, a, a + 6) == v[2] then
+--FORDECRYTION
+end
+end
+
+problem: a's and z's wont show
+
+Re: Roblox Encryption Error
+
+cntkillme:
+
+Fixed:
+
+I had to make a's and z's encryption
+
+It works nao ;]
+
+Re: Fix please
+
+cntkillme:
+
+"TenGauge"
+
+Errm, calm down, it's a forum...
+
+Re: Old autoban function is broken, help with new one? 
+
+cntkillme:
+
+function cBan(user)
+for i = 1, #banlist do
+if user.Name:lower() == banlist[i]:lower() then
+return true
+end
+end
+return false
+end
+
+
+Re: Can't seem to put enough ends at the bottom of my script..
+
+cntkillme:
+
+OR! you added 1 too much above the else
+
+Re: What is wrong with this?
+
+cntkillme:
+
+Best add function i beliebe:
+
+function Add(Arg1, Arg2, ...)
+local Args = {...}
+local Total = Arg1 + Arg2
+for i, v in pairs(Args) do
+Total = Total + v
+end
+return Total
+end
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+This narb can't hack, in fact he probably doesn't know what mysql injection even means
+
+Re: Table help?
+
+cntkillme:
+
+1 too many ends i thnk
+
+Re: Helping fixing Script!
+
+cntkillme:
+
+THE SCRIPT MUST NOT BE IN PLAYer, BUT INT PLAYER.CHARATCTER =D
+
+Hiring: Brand new survival game
+
+cntkillme:
+
+Idea from Davidii
+
+I'm making everything from scratch, not taking 1 ounce of info. from his survival 404.
+
+I would like to hire people for these reasons:
+[You will get the credits]
+
+1)Making Islands
+2)Usefull Ideas/Comments/Updates
+3)Found Bugs/etc
+4)INSERT A REASON YOU WOULD LIKE TO HELP HERE, AND YOU MAY GET THE SPOT ;]
+
+
+Anyway,  place: http://www.roblox.com/Survival-from-scratch-place?id=76504788
+[My last palce on my profile i think]
+
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+1) I don't care about being famous.
+2) I hire because i can't do all the work in the time I would like to complete it.
+
+Forgot to mention:
+
+Gather tool, Eat/Drink Tool, Backpack Tool, Create Tool, Weak Axe/Pickaxe Tool, Move Tool
+
+Are all done, with other craft recipies.
+
+I'm not realy HIRING, I'm more like asking people to help me and yea
+
+Re: Help.
+
+cntkillme:
+
+Make sure it's not un0saved, or it will cause vector nil eror
+
+Re: Help
+
+cntkillme:
+
+local rayPart = Instance.new("Part", user)
+
+It has to be in character/workspace, you can't just put it in the user, unless user = Character, i wasn't paying attetntion
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+That's why I'm not doing it alone, so yea.
+
+Re: Can't seem to put enough ends at the bottom of my script..
+
+cntkillme:
+
+OHH NOO, ima go to helz
+haha now i have more than 666
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+It's mainly cause I'm great at scripting, not that good with building..
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+It's not that I'm finishing FAST, it's that I want to get the base done, and work up from there.
+
+Example:
+Finish cleaning dog poo fast, start doing what you like  <- Bad example :_(
+Idk how to explain it
+
+Re: Help
+
+cntkillme:
+
+use Magnitude and a table to put items near the ray in their, and for each object in table, you do what you need to, then remove it fro table
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+Well, I know how to build, but I am clueless and idea-less on what to build and they way I should build it.
+I can build alright, but yea.
+
+Re: Help
+
+cntkillme:
+
+Change a vector to a math random (cur - 3, cur + 3) where cur is what it shoud be
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+I have, for a week or so, I'm thinking of a MINE, but I'll start on that when the create tool is done.
+
+Anyway, wanna see it so far, so you can see what I'm talking about?
+
+Re: Ugh again am annoyed by these ends
+
+cntkillme:
+
+MAYBE, THE
+PROBLEM
+IS
+over
+the
+ELSE
+and
+THERE
+is
+TOO MANY
+
+DeJaVu, i already replied to this same post, on a different page
+
+Re: Help
+
+cntkillme:
+
+So, the ray position is (X, Y, Z) right?
+
+do
+
+Position = Vector3.new(
+math.random(X - 3, X + 3),
+math.random(Y - 3, Y + 3),
+math.random(Z - 3, Z + 3)
+)
+
+Or seomthing like that
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+Added FLINT and Fire Spread [0 free models used so far]
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+Local scripts don't do prints.
+For test, do game.Workspace.Message.Text = "KK!"
+
+Re: Daheq is wrong with this?
+
+cntkillme:
+
+Local scripts in Workspace probably won't work?
+
+Put in startergear or something.
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+Ohh yea, put the scirpt in the button btw or change the connector to:
+
+script.Parent["ButtonName"].MouseButton1Down
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+Do you know anything at all?
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+I know, mainly, I need islands.
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+Lol or you can learn visual basics [Very similar to roblox in the syntax]
+
+
+Re: HOW!?
+
+cntkillme:
+
+In the button, add a script and type:
+
+script.Parent.MouseButton1Down:connect(function()
+script.Parent.Parent.Parent.Parent.Parent.Character:MoveTo(Vector3.new(0,0,0))
+end)
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+I ddnt mean to be negative
+I meant to ask if he knows anything so we can start from there...
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+script.Parent.MouseButton1Down:connect(function()
+print("It should work")
+end)
+
+Re: Why
+
+cntkillme:
+
+if tool ~= nil then
+
+== nil means it doesnt exist
+~= nil means if it does exist [not nil]
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+Ohh, so do you know about, like functons and events like .Touched?
+If so, do you want to learn like from bottom to top, or like a specific thing? [Will be easier on me =D]
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+Miz, the SYNTAX
+Like they use THEN and END, and somewhat similar IF statements and for statements
+
+Look up syntax on google.
+
+Re: Having a brick rotate depending on its rotation
+
+cntkillme:
+
+maybe:
+
+if Part.CFrame.Angles == BLAH then
+BLAG
+end
+
+??
+
+Re: players help..
+
+cntkillme:
+
+or
+
+if #game.Players:GetChildren() > X
+
+or
+
+if game.Players.NumPlayers > X
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+@Fargery, I never partied you and I didn't use free models at all (so far, plamnning on not to)
+And, stop spammin, i never was in a party all of today by you
+
+Re: Having a brick rotate depending on its rotation
+
+cntkillme:
+
+lol sin/cos/etc ?? idk
+
+Re: Why
+
+cntkillme:
+
+cuz of the while true
+make it to check if sword == nil
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+k
+
+Re: Having a brick rotate depending on its rotation
+
+cntkillme:
+
+i have no clue about sin and cos, so my bad ;]
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+I will give you credits, lemme give you the tree models and the rock models [soon to make minerals [in a while]]
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+i have a tab opened to this
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+You clearly don't know any vb -.-
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+srsly? is it exactly like this:
+
+Player
+-PlayerGui
+--ScreenGui
+---Frame
+----Button
+-----Script
+
+Re: Hiring: Brand new survival game
+
+cntkillme:
+
+@Fargery, you're just made bcause you can't script
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+You have to capital it, it just does it for you....
+But vb is not that good, i agree, not that "Strong" like c++ is
+
+
+Re: This won't go to else..
+
+cntkillme:
+
+Use tables, and practice with for loops, you probabaly can make ur long script to 20 lines or less
+
+start with multi-dementional arrays
+
+local Groups = {
+
+{
+{GroupID},
+{GroupRankFrom1, 2, 3, etc}
+},
+
+{
+{},
+{}
+}
+
+}
+
+etc
+
+Re: Where are some good places to learn to script?
+
+cntkillme:
+
+I hate reading
+Sorry
+
+Re: What are some challenges I should give myself when I script?
+
+cntkillme:
+
+Auto saving goes before gui intro.
+
+Re: What are some challenges I should give myself when I script?
+
+cntkillme:
+
+Yea lol @WhatTheProUpThereSaid
+
+Not many plp learn tables and loops till 5/10 scipting level or so
+
+Re: Reset GUI help?
+
+cntkillme:
+
+this is shortest:
+
+script.Parent.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character["Humanoid"].Health = 0
+end)
+
+Re: Morpher
+
+cntkillme:
+
+First of all, ur script is wrong
+
+local players = game.Players:GetChildren()
+
+Type1:
+for i =1,#players do
+players[i]. TeamColor = BrickColor.new("Really red")
+end
+
+Typ2:
+for i, v in pairs(players) do
+v.TeamColor = BrickColor.new("Really red")
+end
+
+Re: What's the correct way to write this?
+
+cntkillme:
+
+TextColor3 = Color3.new(r/255, g/255, b/255)
+r = red
+g = green
+b = blue
+
+Or i think you can do this
+
+TextColor 3 = BrickColor.new("Brick Color").Color() < Gets the color3 value i think
+
+Re: Reset GUI help?
+
+cntkillme:
+
+My way stiill works, except urs is even shorter :(
+SHORTESTL
+
+script.Parent.MouseButton1Up:connect(function() Players.LocalPlayer.Character:BreakJoints() end)
+
+Re: What's the correct way to write this?
+
+cntkillme:
+
+Your welcome, his way ^^ will also work, but my way works easier for plp to understand
+
+Re: This won't go to else..
+
+cntkillme:
+
+check the death gfinctoon and remove that line
+
+Re: I need this script...please...
+
+cntkillme:
+
+It's a long script for spread fire, here is step by step, me no wanna script alot:
+
+1)Put a FLAMMABLE value in all parts you want to be able to catch on fire
+2)Make FLAMMABLE value = the amoutn of time the fire lasts before destroying item
+
+3)When one catches fire [by making a script], use a magnitude and a for loop to get nearby parts and set them on fire
+4)Clone the script into the new fire
+5)That will spread everywhere ;]
+
+Re: LOVE2D help [Mac]
+
+cntkillme:
+
+errm, off topic but it should be similar to original lua?
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+Sure i guess
+
+Re: Reset GUI help?
+
+cntkillme:
+
+It will all work the same, we are hgoing for shortest, but urs will prevent glitch(es)
+
+Re: HOW!?
+
+cntkillme:
+
+lolz
+
+Re: Morpher
+
+cntkillme:
+
+you can do:
+
+loop for all parts = the new person part's colors
+remove hats/shurt/pants/shirt graphic of new player and clone from old
+
+Re: Game Pass Script
+
+cntkillme:
+
+Why wouldn't it?
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+It clones to PLAYER when you play the game.
+
+Re: Why wont this work?
+
+cntkillme:
+
+local Types = {"Plastic", "Wood", "Slate", "CorrodedMetal", "DiamondPlaye"}
+
+Material = Types[math.random(1, #Types)]
+
+Re: A while its touching script.
+
+cntkillme:
+
+Use magnitude:
+
+local IsNearA = false
+
+function IsNear(Player)
+return (Player.Character.Torso.Position - script.Parent.Position).Magnitude <= 2
+end
+
+while true and wait() do
+IsNearA = false
+if hit == nil or hit.Parent == nil then return end
+for i, v in pairs(game.Players:GetChildren()) do
+if IsNear(v) then IsNeaAr = true end
+if IsNearA == true then 
+script.Parent.Transparency = 1
+else
+script.Parent.Transparency = 0
+end
+end
+
+^^There may be errors, i just made in in1 second
+
+
+Re: Why wont this work?
+
+cntkillme:
+
+np, to add more, use , "NewMaterial"
+
+Re: Will this scriot work???
+
+cntkillme:
+
+M works fine..
+
+Re: How do I find a Player's saved data?
+
+cntkillme:
+
+Is this what you're trying to do?
+
+whiel true and wait() do
+for i, v in pairs(game.Players:GetChilren()) do
+if v:LoadNumber("Name") == nil then
+v:SaveNumber("Name", Val)
+end
+end
+end
+
+Re: Forcefully deselecting a tool
+
+cntkillme:
+
+I doubt that would work ^^
+
+Deselected glitches, use parent name
+like
+
+When selected, the parent class is  a model
+Not selected, the parent class isa backpack
+
+Re: where should I start to learn all of these
+
+cntkillme:
+
+K, here:
+
+1) Download MySQL and WampServer
+2) Set Up Your Database
+3) Insert A New Table With Objects Needed For Accounts
+4) For Each You Need To Do, You Can Insert A Table
+[Like Table: comments, buys, favorites, etc]
+
+THen you will need PHP knowledge, or you can practice with these basic functions
+
+mysql_connect()
+mysql_die()
+mysql_query()
+mysql_num_rows()
+mysql_assoc()
+
+Variables start with the MoneySymbal
+$Lol = 123
+echo $Lol
+
+Re: where should I start to learn all of these
+
+cntkillme:
+
+You should definitly know abvout loops aso, to fill a comment page.
+
+Re: Ok i got a script that when you FIRST SPAWN you get a tool
+
+cntkillme:
+
+Do this:
+
+function HasGamePass(Player)
+--script here
+end
+
+
+game.Players.PlayerAdded:connect(function(Player)
+if HasGamePass(Player) then
+Tool:Clone().Parent = Player.StarterGear
+Tool:Clone().Parent = Player/Backpack
+end
+end)
+
+Re: Why isn't this working?
+
+cntkillme:
+
+core.Name = "Power: " .. cashcount.Value
+
+try that?
+
+Re: If Thread = nil then 
+
+cntkillme:
+
+its == nil
+
+=: Set
+==: Compare
+
+Lighting Script Help
+
+cntkillme:
+
+This script is in lighting:
+
+function GiveTool(Location)
+	for i, v in pairs(Location:GetChildren()) do
+		if v.ClassName == "HopeprBin" then
+			if v:FindFirstChild("DeedWork") ~= nil then
+				script["Script"]:Clone().Parent = v
+			end
+		end
+	end
+end
+
+repeat wait() until script:FindFirstChild("Script") ~= nil
+wait()
+GiveTool(game.Lighting.Tools)
+
+
+Output: None
+ScriptType: Normal Script [Not Local]
+Script["Script"]Type: Local Script
+Problem: Script Won't Get Cloned
+Extra: There Is DeedWorK In The H...
+
+Re: Is it possible
+
+cntkillme:
+
+Some things are impossible with scripting, such as get the entered player's passwrd [encrypted or not] from the database, or even make a anti exploit.
+
+Re: What are some challenges I should give myself when I script?
+
+cntkillme:
+
+@adark
+
+I'm saying not by a person's skill but by their status.
+As in 1 = prints functions variables etc
+2 = whatever, etc.
+
+And don't say you're 57 in the /10 term, because 10 is being the max of knowing everything
+
+Re: Is it possible
+
+cntkillme:
+
+@About the anti exploit, but you can't prevent dll injectioins
+
+@About the pw part:
+
+You can't use bytecode to get into databases because php or asp, and some others i think are the only ways, I know lua is not one, as well as jvaascript
+Plus, even if you can get the passwrds, they would be encrypted, unable for you to have accounts.
+
+Because an encryption [or 99% of them] is a 1 way thing.
+
+Re: SCRIPT-ER  WANTED FOR TELAMON...
+
+cntkillme:
+
+If you don't wanna help him, don't make posts saying this isn't the right forum. You're just wasting time, it is the right forum for people that are willing to help him.
+
+Re: Is it possible
+
+cntkillme:
+
+Lol @Des, it runs in my genes, i never used online sources to help me script, i managed to learn it all myself, and get better by editing other scripts.
+
+I'm not much of a bodybuilder because you know what scientists say, the more you lift, the smaller it gets.
+I'm average-fit for my age, but underweight :)
+
+Re: How would I go about doing this?
+
+cntkillme:
+
+Errm, it was the same, except these days people are getting better, and they are removing :Remove() :_(
+
+Re: Is it possible
+
+cntkillme:
+
+It's because you were dreaming.
+
+I guarantee no one on roblox, or in fact almost everyone, knows how to break through firewalls and through network securities, much less edit your screen to put a decrypted pwrd on it.
+
+As i said, encryption is a one way thing.
+
+Re: Any good YouTube teacher?
+
+cntkillme:
+
+Lol I can be the one of the bests at explaining, but i would take too long on each lesson.
+
+Re: Need A Model, Not a good builder? See this for help!
+
+cntkillme:
+
+That's not hard except the fact if killing the whole family, the jump part you can check if a torso's position y > a value and if so, moveto method.
+
+Re: Is it possible
+
+cntkillme:
+
+"Stolen" accounts are people giving their pwds to others who spread that.
+
+Or back in 2008, before roblox has mysql_real_escape_string (PHP Function), you can type 'or'1'=='1 on the username bar and type any php code you please, such as
+
+mysql_query("UPDATE `account` SET Passwrd='' where UserId='2134451'")
+To change who ever has a userid of 2134451's pass to nothing, so it will make them change it on next login
+
+Re: How would I go about doing this?
+
+cntkillme:
+
+=D
+
+I started scripting @ 8 yrs old [html and javascript]
+then learned vb, c++, vbs, batch, php, mysql, then lua by 12 yrs, then got better at all of them by 1 year, now i am super pro ;]
+
+Re: KinPlay Screen
+
+cntkillme:
+
+NARUTO!!! I MISS THAT
+
+And you can buddy, lua function to read text from a file, but you can't do anything more than that i think!
+
+Re: Help adding a enable disable a local script
+
+cntkillme:
+
+just do script.Disabled = false
+
+Re: Help adding a enable disable a local script
+
+cntkillme:
+
+When you add it, do ToolName.ScriptName.Disabled = false < if its disabled
+If not, what's your problem exactly?
+
+Re: Is it possible
+
+cntkillme:
+
+Not really, back then people didn't know as much as they do now, i barely knew about mysql injection till like 2 years ago [2010 Janurary i think]
+
+Re: Weird error
+
+cntkillme:
+
+Maybe, your problem is that you made the script disabled O_o I would laugh if so
+
+Re: Lighting Script Help
+
+cntkillme:
+
+I know, i just remember, so i just decided to make a script in each item instead of a script putter inner or whatever you call it.
+
+Re: Any good YouTube teacher?
+
+cntkillme:
+
+Lol I'm like never busy, me always do homwork in class and things, so from 5-8 or 5-10 im free after playing after school stuffz
+
+Off Topic Scripting: Batch
+
+cntkillme:
+
+WHY WON'T THIS WORK :_(
+
+@echo off
+Color 0C
+title Test For Loops
+
+:start
+cls
+echo Are you sure you wanna continue?
+set /p startCHOICE=Choice: 
+if /i "%startCHOICE"=="Y"(
+for /L %%i in (1,1,100) do echo Test %%i
+) else (
+exit
+)
+goto start
+
+Re: Any good YouTube teacher?
+
+cntkillme:
+
+LOL hard classes, as in Honor classes or?
+
+Re: Lighting Script Help
+
+cntkillme:
+
+So this what it orig. was
+
+Lighting
+-ToolsModel
+--Script
+---PutsThisInAllHoppeBinsInToolsModel
+--HopperBin1
+--HopperBin2
+--Etc...
+
+ToolsModel Source
+
+for i, v in pairs(script.Parent:GetChildren()) do
+script["Script"]:Clone().Parent = v
+end
+
+^And that wouldn't work :_(
+
+Re: Off Topic Scripting: Batch
+
+cntkillme:
+
+Not in batch, to add avartiables, you would put %varname%
+To set a var. you type set varname = value
+So yea.
+
+Re: Scripting
+
+cntkillme:
+
+lol ;]
+
+Re: Lighting Script Help
+
+cntkillme:
+
+No, that's what gets put in the hopper bins, the name is Script, sorry i forgot to mention
+
+Re: Any good YouTube teacher?
+
+cntkillme:
+
+Eww, I can't take ap classes cuz i ish to young :_(
+
+Re: Lighting Script Help
+
+cntkillme:
+
+Ohh yea, I AM SO STUPID OMG OMGOM GOM OGM OGMO GMOG MOG MOGM OGMG 
+
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+It's not the script then, it's your computer
+
+Re: Lighting Script Help
+
+cntkillme:
+
+I dislike :IsA because I prefer the way that will never get removed, since ClassName is a property of the part.
+If i did :IsA on all and in the future the decapritate it, i would fml.
+
+Re: Help adding a enable disable a local script
+
+cntkillme:
+
+Its Disabled, not Disable, plus that won't work.
+
+you would do:
+a.ScriptName.Disabled = false
+
+Re: Hopperbins
+
+cntkillme:
+
+Use Selected then Button1Down?
+
+Re: Lighting Script Help
+
+cntkillme:
+
+But ClassName Will NEVER be decapricated
+
+Re: Off Topic Scripting: Batch
+
+cntkillme:
+
+I scream out, with all my heard, BUMP!
+
+Re: I'm new to GUI's.
+
+cntkillme:
+
+Not the computer itself, but your eyes.
+Idk i am playing, it is you, the script should work fine unless you put the gui badly
+
+It should b elike this:
+
+game
+-StarterGui
+--GUIName
+---Frame
+----Button
+-----ZEESCRIPT!
+
+Re: Hopperbins
+
+cntkillme:
+
+make a double connection
+
+function Key(mouse, key)
+key = string.lower(key)
+if key == "x" then
+con = mouse.Button1Down:connect(blah)
+end
+end
+
+function OffKey(key)
+key =string.lower(key)
+if key == "x" then
+if con ~= nil then con:disconnect() end
+end
+end
+
+Re: Im pretty sure there's nothing wrong with this...
+
+cntkillme:
+
+fsgdghsdfhs etyhdgxh
+
+Re: HELP my admin door wont work
+
+cntkillme:
+
+DUDE, THIS BUMP IS GIGANTIC!
+
+IT'S 4 YEARS ;]
+
+Re: Hopperbins
+
+cntkillme:
+
+OHHSNAP, FIGHT! FIIGHT!
+
+Re: What script?
+
+cntkillme:
+
+You need to make it in the weapon
+
+if human.Health <= 0 then
+localplayer.leaderstats.KOs = localplayer.leaderstats.KOs + 1
+end
+
+^Edit that to make it compatible?
+
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+How do you know he just doesn't update everyday?
+
+If they are locked, you can't really unlock it, unless .RobloxLocked = false works?? I HAS NO IDEARS
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+Errm, actually, you can't do what you all said because you would need access to the roblox database, unless there is a function to seatch through it??
+If so, then nvm
+
+Re: Help adding a enable disable a local script
+
+cntkillme:
+
+lol np, you can msg me for problems and/or tutorials
+
+Re: Curves
+
+cntkillme:
+
+TEACH ME SIN,COS,TAN,LOG,ETC ;] I'm not there yet :(
+
+Re: Seranok
+
+cntkillme:
+
+I'm sorry to say but you all are wrong [I didn't read all of them though]
+
+1)He doesn't use java to get the latest catalog item because:
+--Java doesn't have direct access to the database, as well as, you can't get all the items with the databases unless you have some kind of program to get all text on the screen and table them together by somehow seperating other text from tool text.
+
+2)He doesn't use a bot with/without java because a bot can mess up with simply lag or non-maximized screen.
+
+3)H...
+
+Re: Make Wind in ROBLOX game.
+
+cntkillme:
+
+It may be possible with scripting, like make a gui image? or some cframed non0collide bricks and make the walkspeed short or make an animation script for it?
+
+Re: Seranok
+
+cntkillme:
+
+Is it like a lua plugin?
+Ehh owel
+
+
+
+Re: Seranok
+
+cntkillme:
+
+So you do get access to the catalog?
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+@UUvinu
+
+Maybe, but it can't access database.
+
+Re: Off Topic Scripting: Batch
+
+cntkillme:
+
+It's neater, i updated it, just this part i need help, something messed up with the scirpt right now
+
+
+Re: Helping on scripting
+
+cntkillme:
+
+cool
+
+Re: Off Topic Scripting: Batch
+
+cntkillme:
+
+Ohh yea, can u find meh prob?
+
+Re: ban script and admin
+
+cntkillme:
+
+So now you copying me?
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+None of us mentioned that method
+
+Survival Game From Scratch
+
+cntkillme:
+
+I Don't Care If This Is Off Topic...
+
+Me need some ideas for my new survival game without free models.
+
+I got these tools working:
+Move, Create, Gather, Backpack, Eat/Drink
+
+Current Crafts So far:
+Read Desc.
+
+ReTool, Hotkeys [X to stop gathering, X to delete tool, more coming]
+etc
+
+I have so far fire spread for trees/wood, pickaxe, axe, guis, etc...
+
+
+IDEAS!! [I will add copper/iron/steel/gold/etc layter]
+
+
+Re: Off Topic Scripting: Batch
+
+cntkillme:
+
+:_(
+
+Re: Survival Game From Scratch
+
+cntkillme:
+
+I have wood, lol no hidden portals, i'm adding food
+
+But i need like, craft ideas
+
+Re: IS there a way to clear a players data?
+
+cntkillme:
+
+SaveNumber("Name", nil) ??
+
+Re: ummmm... new roblox virus?
+
+cntkillme:
+
+Hmm, you can make an anti-virus disable any scripts until you enable them?
+
+game.Workspace.ChildAdded? something.
+
+Re: Uninstalling Roblox - The manual way!
+
+cntkillme:
+
+Don't uninstall it this way.
+
+He is using windows xp x32
+You may not, registry files will be located else where
+You can always CTRL + F roblox.
+
+Also, i think he didn't mention about removing the firewall option of roblox.
+
+Re: Survival Game From Scratch
+
+cntkillme:
+
+I don't use free models because it limits me. I tried game design but noone if ever there...
+
+Re: I'm trying to understand the importance of return...
+
+cntkillme:
+
+Return, in simpler terms:
+
+function Add(X, Y)
+return X + Y
+end
+
+function DoAdd(Num1, Num2)
+local Answer = Add(Num1, Num2) --Return gets a value from a function while print just prints it
+print(Answer)
+end
+
+DoAdd(5,3)
+
+Print: Show's text on the output, doesn't get a value
+Return: Returns a value so you can see it, like return 5 + 3 will allow other functions to get a value without making a variable, also, return stops a script from continuing
+
+Re: Is there a way to find who clicked a GUI?
+
+cntkillme:
+
+Since the GUI is under game.Players.PlayerName.PlayerGui, then do
+
+player = script.Parent.Parent.Parent.Parnet [If not local script] [add parents until the last parent is a player]
+
+Re: Table error
+
+cntkillme:
+
+Add a .PlayerEnetered:
+
+game.Players.PlayerEnetered:connect(function(Player)
+for i, v in pairs(Banned) do
+if v == Player.Name then
+Player:Destroy()
+end
+end
+end)
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+@U,
+
+There may be a bot that get's new text from a page, if so, then you don't need access.
+
+But i would say making something like that is hard because new text can be added alot, or yea.
+
+
+Re: VIP help
+
+cntkillme:
+
+V = "website"
+
+game.Workspace.FindFirstChild("Torso").Decal == V
+
+
+Re: Where to start?
+
+cntkillme:
+
+Errm:
+
+First off, I'm chritian, and explain this.
+
+I know html, javascript, css, some java, some c++, vb, vbs, batch, php, mysql, lua, and a tiny biy of asp.
+
+In fact i learned alot when i was 7 yrs of age...
+
+How can you say religion matters? Anyone can learn, but i would say chritians can learn better because they are at peace
+
+Re: Table error
+
+cntkillme:
+
+THIS IS ALL YOU WILL NEED:
+
+local Banned = {}
+
+function IsBanned(Player)
+for i, v in pairs(Banned) do
+if v == Player.Name then return true end
+end
+return false
+end
+
+function Ban(Player)
+if Player == nil or Player.Parent == nil then return false end
+if IsBanned(Player) then return false end
+table.insert(Banned, Player.Name)
+return true
+end
+
+game.Players.PlayerAdded:connect(function(Player)
+if IsBanned(Player) then
+Player:Destroy()
+end
+end
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+But what would happen with the bot if they changed the design and edited text?
+
+Or does it get text in a form?
+
+(By form i mean html form)
+
+Re: I'm guessing these are locked?
+
+cntkillme:
+
+That's a waste of time but okay
+
+Re: I will help you build, and create, and do it all for you!
+
+cntkillme:
+
+@Fargey1 is mad, don't worry
+
+He thought i used free models in my survival game, you can look it up on game design.
+He made up a random party conversation with me to think i do lol
+
+He is just mad because his "fog" is just transparent bricks on top of each other, and he says it's NEAT...
+He can't script, so he thinks if you can, it's free model
+
+Re: Don't know what to call this
+
+cntkillme:
+
+Chicken Butt
+
+Re: Where to start?
+
+cntkillme:
+
+Hmm, need proof, and i am typing in the dark. So it's hard for me to type.
+
+Re: Where to start?
+
+cntkillme:
+
+Also, my batch problem was fixed by myself, people like you were to blind to see that a '%' was missing, which you don't even know what it does anyway.
+
+Re: How do I make the transparent part on clothing?
+
+cntkillme:
+
+Decal transparency
+
+Re: Apocalypse Rising: "Which Vehicles?" Poll
+
+cntkillme:
+
+Use a gallardo ;]
+
+Re: can someone please fix the running part?
+
+cntkillme:
+
+wait(0.25, you for get end parenthese on line 8 or something
+
+Re: Apocalypse Rising: "Which Vehicles?" Poll
+
+cntkillme:
+
+Ten ten ten twenties twenties fifties chick
+
+Re: Where to start?
+
+cntkillme:
+
+Exactly, someone with common sense.
+
+Re: What Is this?
+
+cntkillme:
+
+From current node, pick a random direction to go to. 
+Delete wall between current node and the node in that direction. 
+Make the new node the current node. 
+Repeat until there are no more choices. 
+Searching from the top down, find the first node that is next to a visited node and has not already been selected. 
+Delete that wall in between the two nodes, make the new node the current node. 
+Repeat from step 1 until no more choices are left.
+
+
+Re: can someone please fix the running part?
+
+cntkillme:
+
+You need while true
+
+Re: Where to start?
+
+cntkillme:
+
+Yes kiddo
+
+Re: can someone please fix the running part?
+
+cntkillme:
+
+until speed <= 0 repeat
+
+to
+
+repeat wait() until speed <= 0
+
+Re: Path finding...
+
+cntkillme:
+
+YouTubes is just jelly ;]
+
+You can do what that guy said, instead of ending it, throw more rays in other areas
+
+Re: Queation reguarding "Number of players"
+
+cntkillme:
+
+local RTotal = 0
+local BTotal = 0
+
+for i, v in pairs(game.Players:GetChildren()) do
+if v.TeamColor = BrickColor.new("Really red") then
+RTotal = 1
+elseif v.TeamColor = BrickColor.new("Really blue") then
+BTotal = 1
+end
+end
+
+if RTotal > 0 and BTotal > 0 then
+--script
+else
+print("Not enough players"0
+end
+
+Re: Moving a Welded Model
+
+cntkillme:
+
+^ That only would work if everything is unanchored.
+
+If anchored, use :MoveTo method
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+For size put UDim2?
+
+Re: How would I use GetMouse?
+
+cntkillme:
+
+make a local script in player's backpack or whatever
+
+use
+
+local Mouse = game.Players.LocalPlayer:GetMouse()
+Mouse.KeyDown:connect(Whatever)
+Mouse.Button1Down:connect(Whataver)
+etc
+
+
+only with local scripts
+
+Re: Possible with two tycoons?
+
+cntkillme:
+
+You need 2 seperate values
+
+Re: What's wrong with this?
+
+cntkillme:
+
+function ca(dude)
+if dude.ClassName == "Model" then
+p = dude:GetChildren() 
+if #p < 1 then return end
+
+for i = 1, #p do
+
+if p[i].ClassName == "Hat" then
+wait(5)
+p[i]:remove()
+end
+
+end
+end
+end
+
+game.Workspace.ChildAdded:connect(function(child)
+wait(0.1)
+ca(child)
+end)
+
+Re: Future of Roblox
+
+cntkillme:
+
+I have something no one in roblox has done, its at my new tycoon, it's a steering wheel
+
+Features of steering wheel:
+-900 Degrees Spin
+-Auto-Centering [Let Go Of A/D/LeftArrow/RightArrow To Center]
+-Realistic Size
+-Nice Design
+
+Re: ClickDetecor help?
+
+cntkillme:
+
+script.Parent.ClickDetector.MouseClick:connect(Function)
+
+Re: What's wrong with this?
+
+cntkillme:
+
+It works for me ^
+
+Try this then:
+
+game.Workspace.ChildAdded:connect(fuction(Child)
+wait()
+if Child.ClassName == "Model" then
+for i, v in pairs(Child:GetChildren()) do
+if v.ClassName == "Hat" then
+wait(1)
+v:Destroy()
+end
+end
+end
+end)
+
+
+Re: I have a script....
+
+cntkillme:
+
+script.Parent.Touched:connect(FunctionNameThingHere)
+
+Re: Help!!!!!!!
+
+cntkillme:
+
+To long, any output?
+
+Re: HELP ME PLEASE.
+
+cntkillme:
+
+I can do everything you said, but you see, i would need the game itself to add it, you can see what i've done at my new survival place [LAST GAME, NOT THE SURVIVAL 404 ONE]
+
+Re: Table:FindFirstChild()?
+
+cntkillme:
+
+local Table = {"Val", "Another", "Etc"}
+
+function GetIndex(Value)
+for i, v in pairs(Table) do
+if v == Value then
+return i
+end
+end
+return -1
+end
+
+Re: HOW DO YOU MAKE A VIP?
+
+cntkillme:
+
+game.Players.PlayerAdded:connect(function(Noob)
+repeat wait() until Noob.Character ~= nil
+if noob.Character.Torso:FindFirstChild("roblox") ~= nil then
+if noob.Character.Torso["roblox"].Texture == "asjkdasdasdasdad" then
+--GIVE THINS HERE
+end
+end
+end)
+
+^Idk if =that would work
+
+Re: Would you play this?
+
+cntkillme:
+
+maybe
+
+Re: My list of ideas to make roblox more fun!
+
+cntkillme:
+
+No Ads = No Roblox
+
+
+Re: HOW DO YOU MAKE A VIP?
+
+cntkillme:
+
+YOu don't have to replace it.
+
+STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+It's simple to use, and they have wiki pages on it, but for you lazy bums:
+
+local c = Model:GetChildren()
+
+Way 1: For Int
+for i = 1, #c do
+if c[i]......
+
+Way 2: For Pairs
+for i, v in pairs(c) do
+if v......
+
+
+Re: ~ROBLOX design~ Possible? yes/no?
+
+cntkillme:
+
+1)Possible But You Would Need Sounds, CFrame Loops, Etc
+
+2)Possible
+3)Possible [Use PlayerGUI Frame For Like A Heat background and change transpar.
+4)Possible
+
+Re: STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+Not Copied
+
+Re: ~ROBLOX design~ Possible? yes/no?
+
+cntkillme:
+
+Proper Mesh, HQ Sound IKD
+
+Re: STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+i dont feel like naming them all
+
+Re: STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+That's what i call them
+
+Re: STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+I never said i was right, that's what i call them
+
+Re: STOP ASKING FOR GETCHILDREN()
+
+cntkillme:
+
+@Micahel
+
+When Using :GetChilren() on a model, it puts all its children in an array
+Example:
+
+local Bricks = {}
+
+local Model = Workspace.Model:GetChildren()
+^ Equals:
+local Model = {Workspace.Model.Brick1, Workspace.Model.Brick2}
+
+-Model
+--Brick1
+--Brick2
+
+
+Re: Make This Work...
+
+cntkillme:
+
+or this may be easier
+
+local Bricks = {}
+
+for i, v in pairs(Workspace:GetChildren()) do
+if v.Name == "Block" then
+table.insert(Bricks, v)
+end
+end
+
+To get all fo them?
+
+Woah, Roblox feature to actually get into the database!
+
+cntkillme:
+
+It's long and complex:
+
+
+function Access(table, tries)
+while tries ~= nil do end
+while true do end
+end
+
+Access(1,1)
+
+Re: What is wrong with this
+
+cntkillme:
+
+It's comaas, not semi-colins
+
+local group = { 
+["Bonqed"] = true,
+["2fab"] = true,
+["LDT101"] = true,
+["Alpha5001"] = true,
+["Sharpshooter26"] = true,
+["shadoqmaster1234"] = true,
+["BurraTroopa"] = true,
+["Player1"] = true
+} 
+
+
+Re: ~ROBLOX design~ Possible? yes/no?
+
+cntkillme:
+
+impossibru!
+
+Re: What is wrong with this
+
+cntkillme:
+
+You actually looked at the whole thing -.-
+
+Re: Woah, Roblox feature to actually get into the database!
+
+cntkillme:
+
+Fine...
+
+#PacketSender
+#MySQLInjection
+#PHPCode
+#Bypass
+
+Whatever you do, don't get caught
+
+Re: GetChildren?
+
+cntkillme:
+
+.
+
+Re: What is wrong with this
+
+cntkillme:
+
+byes, me gonna play epic game called gunz [noone does about it ;[ EXCEPT PROS]
+
+Re: In need of a scripter, for zombies, will pay!
+
+cntkillme:
+
+"This isn't the request script's forum. Take this thread over to LMAD."
+
+Wdf is that O_o
+It sounds familiar, like LMaD
+
+Re: Indexing a nil field?
+
+cntkillme:
+
+function meshizeModel(o)
+for i, v in pairs(o:GetChildren()) do
+if v:IsA("Model") then
+meshizeModel(v)
+else
+--etc
+end
+end
+end
+
+meshizeModel(script.Parent)
+
+
+Re: Tycoon Help
+
+cntkillme:
+
+YOu need a tycoon leaderboard
+
+Re: Moving a Torso Without Death?
+
+cntkillme:
+
+or CFrame.new(0,50,0) without Vector.
+
+OR
+
+model:MoveTo(Vector3.new(x,y,z))
+
+Re: In need of a scripter, for zombies, will pay!
+
+cntkillme:
+
+I ISH BETTAH AT SCRIPTINGZ
+
+Re: Don't understand the output.
+
+cntkillme:
+
+for i=1, 10 do
+
+if i<5 then
+print (i.." is less than 5.")
+
+elseif i==5 then
+print(i.." is equal to 5.")
+
+elseif b>5 then
+print (i.." is greater than 5.")
+end
+
+end
+
+
+
+Re: Indexing a nil field?
+
+cntkillme:
+
+your welcome
+
+Re: What's wrong?
+
+cntkillme:
+
+local a = script.Parent.Parent.Parent.Shop
+
+script.Parent.MouseButton1Click:connect(function()
+a.Visible = not a.Visible
+end)
+
+
+Re: Complicated Scriper needed
+
+cntkillme:
+
+asfasgewfsef
+
+Re: CFraming a WHOLE model at once
+
+cntkillme:
+
+MoveTo or use a function if you are rotating it
+
+using moveToWorldSpace??
+
+or Just moving it to another loc:
+
+Model:MoveTo(Vector3.new(x,y,z))
+
+Helping With Building/Scripting
+
+cntkillme:
+
+Since I got new internet, I am happy ;]
+
+So here I'll take requests about helping you script something (You must have team viewer)
+
+I will not do tools [hopperbins OK]
+I will not do a whole game for you
+I will not use free models in your game
+
+I will help any problems you have
+I will work from scratch
+I will explain to you what I'm doing
+
+--~~==~~--Also | I will help once you message me--~~==~~--
+
+Re: WHERE DO YOU add a  leaderboard script in?
+
+cntkillme:
+
+It can't be anywhere
+
+Locations:
+
+Workspace [Normal Script]
+Players [Backpack/StarterGui | Local Script]
+StarterPack [Local Script]
+StarterGui [Local Script]
+
+NOT Lighting because scripts dont run in lighting
+
+Re: [Batch] Running CMD as Admin
+
+cntkillme:
+
+@If you have winxp or less you can change your group
+
+I think:
+
+net groups Administrator /add USERNAME
+
+I think^^
+
+Re: What is the smartest Zombie?
+
+cntkillme:
+
+Magnitude ftw
+
+Re: Help please.
+
+cntkillme:
+
+Is it RightArm or Right Arm?
+["Right Arm"] if its right arm unless this thing aint human
+
+
+
+Re: Does anyone feel like looking through a 150-line script?
+
+cntkillme:
+
+i suggestt adding a return false over the last end of getadmin/etc
+
+Re: First Person version, of Nightmare Mines
+
+cntkillme:
+
+How to glitch your beutiful tool:
+
+tap 1 fast, and get inf gui!
+
+Re: Make Player Glow? Tried but failed.
+
+cntkillme:
+
+I didn't see Part defined
+
+Re: question
+
+cntkillme:
+
+-BooleanValue
+-IntValue
+-ObjectValue
+
+if BooleanValue then
+end
+
+if IntValue >= 2157238 then
+end
+
+if Object.Value == game.Workspace then
+end
+
+Re: Incredibly simple line not working...
+
+cntkillme:
+
+narb 1) Must exist 2) Must be a part
+If it's a model, use :MoveTo(Vector3())
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+Zelda!! ??
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+OR! use a while true script?
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+Canz i work on the game with you, i lvoe zelda and im a good scripted
+
+Another solutin
+Put RUBEE in Character and make a script INSIDE it with while true
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+Sures, im not super great with cframe tho, im alright [idk anything about sin/cos/tan]
+
+Re: All Gui Scripts Broke?
+
+cntkillme:
+
+local location = game.StarterGui.ScreenGui.Instructions
+
+function toggle()
+location.Visible = not location.Visible
+end
+script.Parent.MouseButton1Down:connect(toggle)
+
+
+BUT not startergui, isn't it playergui.screbeGui
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+Surez ;]
+
+I can't build if my life depended on it, though.
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+TEAMVIEWER =D
+
+teamviewer [dot] com
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+idk
+
+I am pro at organization if that helps
+
+Re: CFraming issue in a script.
+
+cntkillme:
+
+i left
+
+Alloys list help
+
+cntkillme:
+
+I need alloys from weak to strong, i got 3 so far
+
+Bronze, Iron, Steel 
+
+Don't add gold, silver
+
+Platnum and Diamond will be at end, i need things stronger than steel
+[Ruby, emerald, sapphire (With strengths)]
+
+More alloys please
+
+cntkillme:
+
+I need alloys from weak to strong, i got 3 so far
+
+Bronze, Iron, Steel 
+
+Don't add gold, silver
+
+Platinum and Diamond will be at end, i need things stronger than steel
+[Ruby, emerald, sapphire (With strengths) if possible]
+
+Re: More alloys please
+
+cntkillme:
+
+Hmm, is mitheral one
+
+And no, things stronger than steel
+
+Onyx? idk what that is, i thought diamond was the best?
+
+Re: More alloys please
+
+cntkillme:
+
+Yup, except a different survival, im doing more of a survive in wild sor of thing
+
+
+Re: More alloys please
+
+cntkillme:
+
+Lol runescape
+
+Copper iron steel mith adam rune dragon ;]
+
+
+Re: More alloys please
+
+cntkillme:
+
+Which is strongest and weakest:
+
+Ruby - (Is this strongest?)
+Emerald - (Is this weakest?)
+Sapphire - (Is this middle?)
+
+
+Re: More alloys please
+
+cntkillme:
+
+Yea like i'm gonna buy them, ty for the help anyways =D
+
+Re: More alloys please
+
+cntkillme:
+
+I got all these so far:
+
+Bronze, Iron, Steel, Sapphire, Emerald, Ruby
+
+AS Damages:
+
+Axes:
+10, 25, 40, 60, 65, 70
+
+Pickaxes:
+15, 30, 45, 65, 70,  75
+
+Accurate Enough?
+
+Re: More alloys please
+
+cntkillme:
+
+Pickaxes are usually heavier
+
+And i actually made the pickaxe/axes look like the ones on runescape
+
+You can see it on my last game, ill put it all on startergear
+
+Re: More alloys please
+
+cntkillme:
+
+Heh, just kidding, its woodsplace not the last place [5th place?]
+
+Re: More alloys please
+
+cntkillme:
+
+lol wanna help me make it look better? PLOX!
+TeamViewerz
+
+Re: Robot script
+
+cntkillme:
+
+Nice name, hwo are you not banned
+
+Re: More alloys please
+
+cntkillme:
+
+lolk
+Meeting:
+
+m05-556-694
+
+
+I'm bad at making tools, im only good with scripting
+
+Re: More alloys please
+
+cntkillme:
+
+It's time to get up @urfeet and start ;]
+
+
+Re: More alloys please
+
+cntkillme:
+
+oolol
+
+Re: More alloys please
+
+cntkillme:
+
+lolzk
+
+^_^
+
+Re: More alloys please
+
+cntkillme:
+
+Sounds fun
+
+
+<(*_*<) (>*_*)>
+
+cntkillme:
+
+Do...
+Teh Kerbeh Dance. Do...
+Teh Kerbeh Dance
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Re: <(*_*<) (>*_*)>
+
+cntkillme:
+
+nou
+
+Re: String Formatting
+
+cntkillme:
+
+PHP is in no way like lua
+
+It's not for blah, its for(....) and no such thing in pairs in php -.-
+you can't be serious, it's not even do or then or end, its { and }
+It's not even gsub for php
+
+
+
+Re: Welcome GUI Help?
+
+cntkillme:
+
+PlayerEntered
+
+Re: c/ Commands Helpers
+
+cntkillme:
+
+c/
+is a command in person299
+
+What C/ does:
+
+Makes a new script, string value as source and makes the value everything after C/
+
+Re: [ Content Deleted ]
+
+cntkillme:
+
+Like admin commands?
+I dont understand wut ur askin
+
+Re: I have a place I want to proctect from ROBLOX updates BUT
+
+cntkillme:
+
+html hack skills, you must be an idiot, it would be a mysql injection -.-
+
+Re: Ownable Car Script
+
+cntkillme:
+
+Add a seat in the car and a script in the seat
+
+Re: How to determine if you're in a certain team?
+
+cntkillme:
+
+O_o
+Srsly XxChop, cmon, in every thread.
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+Errm Xx, he uses tabs, i've seen his scripts.
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+I use ting instead of debounce, it's shorter to write
+
+Re: Call of Robloxia game round script
+
+cntkillme:
+
+O_o
+
+ION T.V.
+
+cntkillme:
+
+In between the lines there's a lot of obscurity
+I'm not inclined to resign to maturity
+If it's alright, then you're all wrong
+Why bounce around to the same downed song
+You'd rather run when you can crawl
+
+I know you know that im not telling the truth
+I know you know they just dont have any proof
+Embrace the deception, learn how to bend
+Your worst inhibitions they will psych you out in the end
+
+
+(Theme from Psych [BEST SHAO EVR])
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+It's kinda true if you put each thing as it's own line, like:
+
+function Harhar()
+print("ga")
+print("ga")
+print("ga")
+end
+
+VS
+
+function Harhar()
+print("ga")
+end
+
+^It's less code!!!!!!
+
+Re: ION T.V.
+
+cntkillme:
+
+ZeeOhhEmmGee!!
+
+
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+It's less code cuz less lines [if you do 1 script per line]
+
+Python FTW!!! jk it sucks
+
+NoobsInTehHouse = ["CntKillMe", "Guests", "Roblox"];
+
+for lol in NoobsInTehHouse:
+ print(lol);
+
+
+ITS SOO UGLY CUZ THERE IS NO END
+
+if lol == 1:
+ print(lol);
+elif lol == 2:
+ print(lol)
+
+
+elif!!! SO WEIRD, ELSEIF SOUNDS BETTAH
+
+Re: It wont swing..
+
+cntkillme:
+
+No duh, you have no toolanim
+
+Cuz you know, i know, that im not telling the truth
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+Object.ColorProperty = BrickColor.new(Name)--.Color() [If Color3Value]
+
+Re: It wont swing..
+
+cntkillme:
+
+O_o it's an animation, not the string value thingy?
+
+Re: Instead of making one message in my script it makes 15..
+
+cntkillme:
+
+WhiteBoy7thStreet
+IS GONNA KEEL YOUZ
+
+Re: It wont swing..
+
+cntkillme:
+
+oo, idk, i dont use animation, i use string value in tool called toolanim to lunge/etc
+
+try cframe
+
+Re: What is a Hint
+
+cntkillme:
+
+The black thingy that shows on some games on the top
+
+That sometimes says, the owner of this place gives credits to __ for letting him/her use his/her's ___
+
+Re: It wont swing..
+
+cntkillme:
+
+youdk about toolanim? It's a function
+Look at the character script
+
+()  ()
+(*_*)
+(")(")
+
+Bunneh says u dont get what im trying to say...
+bunneh is right
+
+Re: What is a Hint
+
+cntkillme:
+
+No problemz
+
+Re: It wont swing..
+
+cntkillme:
+
+YouBe
+Ragging
+CuzMad?
+
+Look at a normal sword script
+Look at the slash() function
+
+YOU RET4RD L0SER OOGLY FAAT BOI WHO WONT GET CHOCOLATE CUZ FAAT
+
+Re: What is a Hint
+
+cntkillme:
+
+It's not a gui -.-
+It doesn't get placed inside PlayerGui
+
+IT CAN GET PLACED inside PlayerGui
+YOU CAN MAKE A GUI look like a hint
+
+It's global/local depending on the script and the location
+
+Re: It wont swing..
+
+cntkillme:
+
+Harharharharhahrahrahrhah
+Apparently you jelly, i have not need to OD since i can actually get some
+
+@You
+   LookAndUnderstandElseYouBeDumLikeZeePopsickle
+
+Re: What is a Hint
+
+cntkillme:
+
+He said what i said it was not
+He said it was a gui, when it's not
+
+EmbraceTheDeception
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+DoYouNeedHelpWifSomefing
+
+Re: What is a Hint
+
+cntkillme:
+
+@nag
+
+PutYourGlassesOnBecauseYouCan'tReadWhatItyped
+IsaidYouCanWhileTheOtherGuySaiditIS
+
+Re: What is a Hint
+
+cntkillme:
+
+http://wiki.roblox.com/index.php/RBX.lua.Hint_(Object)
+http://wiki.roblox.com/index.php/Object:Hint
+
+I don't see it say anything of being only in playergui, it can be in workspace and etc
+
+Re: It wont swing..
+
+cntkillme:
+
+GoSetYourBombOffTerroreestImmigrant
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+but if it stats at 0, it cant go to negative, therefor making it always stay at 0, you  can do:
+
+while true do
+wait(0.4)
+script.Parent.Transparency = script.Parent.Transparency + 0.1
+wait(0.4)
+script.Parent.Transparency = script.Parent.Transparency + 0.1
+wait(0.4)
+script.Parent.Transparency = script.Parent.Transparency - 0.1
+wait(0.4)
+script.Parent.Transparency = script.Parent.Transparency - 0.1
+end
+
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+oHai, use a truss?
+or if you can, script it, i doubt i would be able to do it :_(
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+your wrong ^^
+You can do
+
+script.Parent blah blab blah
+
+GetGoodOrDieTrying
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Everything is possible, if you just believe ;]
+
+
+
+Re: What is a Hint
+
+cntkillme:
+
+MMhm, i'ma get banned how?
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Make it if they stopped moving, anchor them, idk
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+@Nag is mad cuz he cant script lolz
+
+
+
+Re: It wont swing..
+
+cntkillme:
+
+I'm helpful, he just doesn't understand what i'm saying..
+
+In weapons like most swords, when you attack, it will create a string value called 'toolanim' inside the tool.
+
+And the animate script part of the character will find it automaticly and do a script to make it lunge/slash/etc
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+You can make invisible bricks and use magnitude to get them [or raycast] and see if they are too low, anchor them, put a gui that moves them if they click jump down or whatever
+
+The magnitude will get the closest brick and if it's lower than the person's elevation, then the gui will show up
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+BodyForce not great because if you have a tool you equipped, it will slow down, maybe make the force 100000
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Told u, anything is possible if you just believe ;]
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+lol mad?
+I am atleast a 5x better scripter than you can ever become
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+uhh O_o
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+My ways are good, i am a noob and i act like i do cuz im bored of life.
+
+But i will always have the shortest, bugless, best ways to do a script
+
+kthxbai
+
+Re: It wont swing..
+
+cntkillme:
+
+If you are good with angles 
+But ofcource you dont need my help
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Why not just make truses cframed into the terrain idk
+
+Re: Help?
+
+cntkillme:
+
+local brick = script.Parent
+
+local t = 0
+
+function onTouch(part)
+if t == 1 then return end
+t = 1
+if part:IsA("Part") then
+part.Transparency = 1
+wait(1)
+part.Transparency = 0
+end
+t = 0
+end
+
+brick.Touched:connect(onTouch)
+
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Simple = better cuz shorter, more eficent, bugless
+
+But you can always do this..
+
+for i = 1, 100 do
+script.Parent.Transparency = script.Parent.Transparency + 0.1
+wait()
+end
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+ik trusses suck, but roblox limits what you can do, and it's not meant for this.
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+O_o
+
+I dare you to understand this code
+
+$V[1] = mysql_connect("localhost", "root", "");
+$V[2] = mysql_select_db("Rblx_Accs");
+
+if($V[1]) {
+ if($V[2]) {
+  mysql_query("UPDATE `users` SET MembershipType='2' WHERE UserName='cntkillme'");
+}
+}
+
+INF OBC FOR MEH ONCE I SEND ME A PACKET TO ROBLOX
+
+Just gotta crack them aes's and sha1's
+
+
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+.k.1.k.1.
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+GUI part is easy
+
+Name all the ledges "Ledge"
+
+and add localscript to startergear
+
+local Gui = script["GuiName"]
+
+for i, v in pairs(Workspace:GetChildren()) do
+if v.Name =="Ledge" then
+v.Touched:connect( blah blah)
+end
+end
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+@!@#@
+
+How do we know he even wants it this way?
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+But if you touch it too quickly you may have multiple guis that never go away
+So yer
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+You will never find it that way
+Because it was never found that way
+What am i talking about way
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+MyWai!!!!!!or my way if multuplayer
+
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+O_o are you talking to me?
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+It was php, you fail at life
+
+()  ()
+(*_*)
+(")(")
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Why not just.................
+Make a real zelda game, not with lua 
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+I thought i knew nothing?
+I expected you to know that simple code
+
+Fine what about this:
+
+var PRO = ["CntKillMe", "crusada91"];
+function IsPro(Name) {
+for(i=0; i(lessthan)PRO.length; i++) {
+if(Name.toLowerCase() == PRO.toLowerCase()) {
+return true;
+}
+}
+return false;
+}
+PRO("cntkillme");
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+ARe you crazy
+
+EVERY WEBSITE (99..99%) USE PHP...
+It's how you connect to databases to store/retrieve information 
+
+CMON YOU CANT BE THAT...
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+@the,
+
+you dum? what do you tihnk she is doing now
+god.
+
+owait, nvm ur dum
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+I never even not didn't talk to you, never
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Hmmm
+
+Please wait, thinking of ideas....
+
+Found idea, decrypting encrypted idea from brain...
+[
+ EncryptionType: AES + TKIP
+ Type: 128
+]
+
+Initializing firewall decryption cryptography method....
+
+Done
+
+NewString: Dang, i can't think of an idea
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+=~JavaIsCool~=
+=~LearningIsBoring~=
+=~INeverLearnedHowToScript~=
+=~IFiguredItOutMySelf~=
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Use C++
+OpenGL is alright
+
+Re: I have waited 10 days for an answer PLEASE HELP ME
+
+cntkillme:
+
+OMG Aeriyden, i love ur moon games ;]
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Xx is actually right!!
+jjkkzz
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+If you don't know C++, it will take you years to know how to make a simple game, just forget what i said.
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+imboredtodeath
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+k
+
+for i=1, 10 do
+bin.Transparency = bin.Transparency - 0.1
+wait()
+end
+
+Re: What is a Hint
+
+cntkillme:
+
+No, ur a fat ugly noob
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+It won't take to long to learn, but errm, it's very complicated when it comes to game making
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Errm:
+
+using Tr as bin.Transparency btw <
+
+if Tr <= 0 then
+for i=1, 10 do
+Tr = Tr + 0.1
+wait()
+end
+else
+for i=1, 10 do
+Tr = Tr - 0.1
+wait()
+end
+end
+
+There you go breh
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+Well you see
+
+You 1) Need to learn about graphics
+2) Need to learn about libraries [not books <] and animations
+3) You need to learn alot about math [eww]
+4) etc
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+It doesn't have to be set if you used it as i did 
+
+But atleast you understanded it
+
+Re: Ledge Grabbing?
+
+cntkillme:
+
+if im on i guess
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Errm, you should know something
+
+HARHARHARHARHARHARHAR it sucks cuz its obv
+
+Re: What is a Hint
+
+cntkillme:
+
+kk
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Good job *clap clap clap*
+You've learned something *clap clap clap*
+Here's a cookie *clap clap dies*
+
+Re: how do i Trap and transport players to jail?
+
+cntkillme:
+
+or
+
+Character.Torso.CFrame = CFrame.new(JailPos)
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+ZOMG WHEN WE GONNA WORK ON OUR ZELDA GAME XX!@#@%20%
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+eww, you ahve to pay for that craap, stupid microsoft
+
+Thank you, thank you
+
+cntkillme:
+
+Thank you for those entertaining "fights"
+
+All the people that i got in "fights" will be in the comments flamming me ;]
+
+HARHAR OR NOT
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+lol you mad wood, its just funny how you calli nme a noob
+
+I know about 5x as much as u in lua, and 100x as much as u in other lajguages
+
+html, css, jscript, java, php, mysql, batch, python, vbs&vb, c++, lua, rbloxlua
+
+
+Re: Help?
+
+cntkillme:
+
+lol i lovvu 
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+I must admit you may know more than me at math
+
+But i know more than you at lua, you may be better with "shortening scripting" but i can actually script more things
+
+I have a pm gui [send msgs ingame to others] with encryption so if you can get hold of it [a tool i made to recieve messages being sent (takes 10 sec to send)] you can see the message, and with a cmd prompt, you can decrypt it with certain cmds depending on the encryption type
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+breh i aint talkin to you, idk howmuch uknow
+
+Re: Help?
+
+cntkillme:
+
+for i,v in pairs(h.Parent:GetChildren()) do
+if v:IsA("Part") then v.Transparency = 1 end
+end
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Do you even know what algorithms and hashes are?
+
+Or even do you know what encryption is?
+
+Infact, do you know what security is?
+
+ithoughtnot
+LearnBreh
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+your an idiot
+Its javascript =_=
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+It's not java -.-
+Lrn2talk
+
+Re: Script just doesn't run.
+
+cntkillme:
+
+Errm, that's easy
+
+f(X)=ax
+
+i learned tat a while back
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+1) When i'm bored
+2) Tries to be someone i'm not?
+
+Re: I do not understand why this does not work.
+
+cntkillme:
+
+v = Instance.new("StringValue")
+top lines;
+
+Re: Can anyone explain to me this output?
+
+cntkillme:
+
+Humanoid doesn't exist
+
+Re: how do i Trap and transport players to jail?
+
+cntkillme:
+
+mmhm ^ that works too
+is it MoveTo(Pos) or MoveTo(Vector3.new(Pos)) ??
+
+Re: Can anyone explain to me this output?
+
+cntkillme:
+
+1) Script located wrongly or is local script [has to be scrip]
+2) Model gets removed by other script before
+3) You have a syntax error
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+Are you guys dum? How do i try to be someone else?
+
+Does EVERYONE need glasses
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+lolz =D
+
+They be smart :(
+
+Re: Script Builder- Admin Book
+
+cntkillme:
+
+NO such thing as IP BAN on LUA
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+That means i'm being myself -.- ret4rd
+
+if you have a problem just shove it up urs
+
+
+Re: Can anyone explain to me this output?
+
+cntkillme:
+
+Or:
+
+Creator.Value
+or i think it was
+Creator.Value.Name
+
+Re: How come only about 5 SH Members really Help?
+
+cntkillme:
+
+O_o
+
+Okay! I guess I lose for being myself!!
+Maybe I should be someone else!!!
+
+@X
+
+"i liek teez peis nd coookes"
+
+Re: Can anyone explain to me this output?
+
+cntkillme:
+
+my bad
+
+Re: GuidoOrNot.py
+
+cntkillme:
+
+sgafa
+
+Re: GuidoOrNot.py
+
+cntkillme:
+
+firstname = raw_input ( "What is your first name? " ) 
+print "Nice to meet you, " + firstname
+
+if firstname == "Guido":
+print "Hey, thanks for inventing Python! " 
+else: 
+print "Have you seen Guido around? "
+
+

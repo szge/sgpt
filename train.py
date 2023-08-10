@@ -18,7 +18,7 @@ DROPOUT = 0.2
 
 torch.manual_seed(1337)
 
-with open("./corpora/tinyshakespeare.txt", "r", encoding="utf-8") as f:
+with open("./corpora/cntkillme.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 chars = sorted(list(set(text)))
@@ -194,7 +194,7 @@ if os.path.exists("model.pt"):
 
     # generate from the model
     context = torch.zeros((1, 1), dtype=torch.long, device=DEVICE)
-    print(decode(m.generate(context, max_new_tokens=500)[0].tolist()))
+    print(decode(m.generate(context, max_new_tokens=2000)[0].tolist()))
 else:
     model = BigramLM()
     m = model.to(DEVICE)
