@@ -2,12 +2,6 @@
 
 import requests
 from bs4 import BeautifulSoup
-import re
-import time
-import random
-import os
-import json
-import argparse
 
 
 def get_roblox_posts():
@@ -30,7 +24,7 @@ def get_roblox_posts():
 
         # get next page
         next_button = soup.find("a", class_="Forward Link-Enabled")
-        if next_button is not None and len(posts) < 1000:
+        if next_button is not None and len(posts) < 4000:
             url = "https://archive.froast.io" + next_button["href"]
             print(url)
             page = requests.get(url)

@@ -6,30 +6,30 @@ import tiktoken
 
 # region hyperparameters
 # full
-# BATCH_SIZE = 16  # number of sequences per batch
-# BLOCK_SIZE = 64  # length of sequence to process at a time
-# MAX_ITERS = 5000
-# EVAL_INTERVAL = 500
-# LEARNING_RATE = 3e-4
-# DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-# EVAL_ITERS = 200
-# N_EMBED = 60  # must be divisible by N_HEADS
-# N_HEADS = 6
-# N_LAYERS = 4
-# DROPOUT = 0.2
-
-# test
-BATCH_SIZE = 32  # number of sequences per batch
-BLOCK_SIZE = 8  # length of sequence to process at a time
+BATCH_SIZE = 16  # number of sequences per batch
+BLOCK_SIZE = 64  # length of sequence to process at a time
 MAX_ITERS = 3000
 EVAL_INTERVAL = 500
 LEARNING_RATE = 3e-4
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 EVAL_ITERS = 200
-N_EMBED = 32  # must be divisible by N_HEADS
-N_HEADS = 4
-N_LAYERS = 2
+N_EMBED = 60  # must be divisible by N_HEADS
+N_HEADS = 6
+N_LAYERS = 4
 DROPOUT = 0.2
+
+# test
+# BATCH_SIZE = 32  # number of sequences per batch
+# BLOCK_SIZE = 8  # length of sequence to process at a time
+# MAX_ITERS = 3000
+# EVAL_INTERVAL = 500
+# LEARNING_RATE = 3e-4
+# DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+# EVAL_ITERS = 200
+# N_EMBED = 32  # must be divisible by N_HEADS
+# N_HEADS = 4
+# N_LAYERS = 2
+# DROPOUT = 0.2
 # endregion
 
 torch.manual_seed(1337)
